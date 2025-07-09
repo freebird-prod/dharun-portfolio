@@ -432,7 +432,7 @@ const AboutPage: React.FC = () => {
               <div className="space-y-4">
                 {[
                   { area: 'Frontend Development', percentage: 95, description: 'React, Next.js, Tailwind CSS, Framer Motion' },
-                  { area: 'Backend Development', percentage: 65, description: 'Node.js, Python (Flask), APIs, Databases' },
+                  { area: 'Backend Development', percentage: 65, description: 'Node.js, Python (Flask), APIs, JWT Token' },
                   { area: 'Database Management', percentage: 75, description: 'PostgreSQL, Firebase, Supabase, Strapi CMS' },
                   { area: 'DevOps & Cloud', percentage: 55, description: 'AWS, Azure, Docker' },
                 ].map((item, index) => (
