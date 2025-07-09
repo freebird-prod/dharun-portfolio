@@ -490,7 +490,7 @@ const AboutPage: React.FC = () => {
               { label: 'Current Year', value: '3rd Year' },
               { label: 'CGPA', value: '8.44' },
               { label: 'Programming Languages', value: '4' },
-              { label: 'Open Source Contributions', value: '12+' },
+              { label: 'Open Source Contributions', value: '10+' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
