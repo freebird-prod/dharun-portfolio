@@ -7,6 +7,17 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "headers": [
+      {
+        "source": "**/*.(js|css|png|jpg|jpeg|svg|gif|webp)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ],
     "frameworksBackend": {
       "region": "us-west1"
     }
