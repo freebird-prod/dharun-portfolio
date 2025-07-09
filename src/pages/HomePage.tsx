@@ -122,7 +122,7 @@ const HomePage: React.FC = () => {
               onClick={handleDownload}
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(6,182,212,0.5)" }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-gradient-to-r from-purple-700 via-pink-600 to-violet-700 text-white font-semibold rounded-full hover:from-pink-600 hover:to-violet-700 transition-all duration-300 w-full sm:w-auto"
+              className="flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 bg-gradient-to-r from-purple-700 via-pink-600 to-violet-700 text-white font-semibold rounded-full hover:from-pink-600 hover:to-violet-700 transition-all duration-300"
             >
               <Download size={20} />
               Download Resume
