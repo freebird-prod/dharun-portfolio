@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { Download, Github, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+import { Download, Github, Linkedin, Instagram, ArrowRight, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TypewriterEffect from '../components/TypewriterEffect';
 
@@ -56,6 +56,16 @@ const HomePage: React.FC = () => {
     { label: 'Hackathon Won', value: '1' },
     { label: 'Years of Experience', value: '2+' },
   ];
+
+  const getTailwindColor = (color: string): string => {
+    const colors: Record<string, string> = {
+      'gray-600': '#4B5563',
+      'blue-500': '#3B82F6',
+      'pink-500': '#EC4899',
+      'cyan-500': '#06b6d4',
+    };
+    return colors[color] || '#4B5563';
+  };
 
   return (
     <div className="min-h-screen">
@@ -145,23 +155,55 @@ const HomePage: React.FC = () => {
             className="flex items-center justify-center gap-4 lg:gap-6 mb-12 lg:mb-16"
           >
             {[
-              { icon: Github, href: "https://github.com/freebird-prod", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/dharun-kumar-sh", label: "LinkedIn" },
-              { icon: Instagram, href: "https://www.instagram.com/iam.dharunkumar", label: "Instagram" },
-            ].map(({ icon: Icon, href, label }) => (
-              <motion.a
+              {
+                icon: Github,
+                href: 'https://github.com/freebird-prod',
+                label: 'GitHub',
+                color: 'text-gray-500',
+                bg: 'gray-600',
+              },
+              {
+                icon: Linkedin,
+                href: 'https://www.linkedin.com/in/dharun-kumar-sh',
+                label: 'LinkedIn',
+                color: 'text-blue-500',
+                bg: 'blue-500',
+              },
+              {
+                icon: Instagram,
+                href: 'https://www.instagram.com/iam.dharunkumar',
+                label: 'Instagram',
+                color: 'text-pink-500',
+                bg: 'pink-500',
+              },
+              {
+                icon: Twitter,
+                href: 'https://x.com/DharunSH0302006',
+                label: 'Twitter',
+                color: 'text-cyan-400',
+                bg: 'cyan-500',
+              },
+            ].map(({ icon: Icon, href, label, color, bg }) => (
+              <motion.div
                 key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => window.open(href, '_blank')}
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-3 lg:p-4 rounded-full bg-gray-800/50 border border-gray-700 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
+                className="relative group p-3 lg:p-4 rounded-xl cursor-pointer bg-gray-800/50 border border-gray-700 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
               >
-                <Icon size={24} className="text-gray-400 hover:text-cyan-400 transition-colors" />
-              </motion.a>
+                <Icon className={`${color} transition-colors`} />
+
+                {/* Tooltip */}
+                <div
+                  style={{ backgroundColor: getTailwindColor(bg) }}
+                  className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-white text-xs font-medium px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 whitespace-nowrap"
+                >
+                  {label}
+                </div>
+              </motion.div>
             ))}
           </motion.div>
+
         </motion.div>
       </section>
 
