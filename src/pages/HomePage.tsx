@@ -144,7 +144,7 @@ const HomePage: React.FC = () => {
               onClick={() => navigate('/about')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 w-full sm:w-auto"
+              className="flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
             >
               Learn More
               <ArrowRight size={20} />
