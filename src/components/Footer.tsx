@@ -1,14 +1,26 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { Github, Linkedin, Instagram, Heart, Code2 } from 'lucide-react';
+import { Github, Linkedin, Instagram, Heart, Code2, Twitter } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+    { icon: Github, href: 'https://github.com/freebird-prod', label: 'GitHub', color: 'text-gray-500', bg: 'gray-600' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/dharun-kumar-sh', label: 'LinkedIn', color: 'text-blue-500', bg: 'blue-500' },
+    { icon: Instagram, href: 'https://www.instagram.com/iam.dharunkumar', label: 'Instagram', color: 'text-pink-500', bg: 'pink-500' },
+    { icon: Twitter, href: 'https://x.com/DharunSH0302006', label: 'Twitter', color: 'text-cyan-400', bg: 'cyan-500' },
   ];
+
+  const getTailwindColor = (color: string): string => {
+    const colors: Record<string, string> = {
+      'gray-600': '#4B5563',
+      'blue-500': '#3B82F6',
+      'pink-500': '#EC4899',
+      'cyan-500': '#06b6d4',
+    };
+    return colors[color] || '#4B5563';
+  };
+
 
   const quickLinks = [
     { label: 'About Me', href: '/about' },
@@ -75,17 +87,25 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
-                <motion.a
+                <motion.div
                   key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  className="relative group"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 rounded-lg flex items-center justify-center transition-all duration-300 hover:bg-cyan-500/10"
                 >
-                  <social.icon size={18} className="text-gray-400 hover:text-cyan-400 transition-colors" />
-                </motion.a>
+                  <motion.div
+                    onClick={() => window.open(social.href, '_blank')}
+                    className={`w-10 h-10 bg-gray-800/50 cursor-pointer backdrop-blur-sm border border-gray-700/50 rounded-lg flex items-center justify-center transition-all duration-300`}
+                  >
+                    <social.icon className={`${social.color} w-5 h-5 transition-colors`} />
+                  </motion.div>
+
+                  {/* Tooltip */}
+                  <div style={{ backgroundColor: getTailwindColor(social.bg) }}
+                    className={`absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-white text-xs font-medium px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 whitespace-nowrap`}>
+                    {social.label}
+                  </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
