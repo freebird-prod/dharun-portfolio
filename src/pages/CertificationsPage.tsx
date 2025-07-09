@@ -252,9 +252,9 @@ const CertificationsPage: React.FC = () => {
                 </h2>
                 <button
                   onClick={closeModal}
-                  className="bg-red-700 hover:bg-red-600 transition-all p-2 rounded-xl text-white"
+                  className="bg-red-700 hover:bg-red-600 transition-all p-2 rounded-xl text-white flex items-center justify-center"
                 >
-                  <X className="w-5 h-5" strokeWidth={3} />
+                  <X className="w-6 h-6" strokeWidth={3} />
                 </button>
               </div>
 
