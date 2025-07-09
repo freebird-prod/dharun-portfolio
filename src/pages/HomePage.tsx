@@ -3,6 +3,7 @@ import { motion, Variants } from 'framer-motion';
 import { Download, Github, Linkedin, Instagram, ArrowRight, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TypewriterEffect from '../components/TypewriterEffect';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
 
@@ -14,6 +15,8 @@ const HomePage: React.FC = () => {
     link.click();
     document.body.removeChild(link);
   };
+
+  const navigate = useNavigate();
 
   const typewriterWords = [
     'Composing sleek UIs with React...',
@@ -138,7 +141,7 @@ const HomePage: React.FC = () => {
               Download Resume
             </motion.button>
             <motion.button
-              onClick={() => window.open('/about', '_self')}
+              onClick={() => navigate('/about')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 px-6 lg:px-8 py-3 lg:py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 w-full sm:w-auto"
