@@ -12,7 +12,7 @@ const ProjectsPage: React.FC = () => {
       id: 1,
       title: 'AI-Powered Resume Builder',
       description: 'Effortlessly Craft a Standout Resume with Our AI-Powered Resume Builder',
-      longDescription: 'BuilderBuddy is an intelligent resume-building platform that leverages AI to analyze user input and generate personalized, ATS-friendly resumes. It offers real-time previews, smart content suggestions, and seamless PDF exports. Integrated with Strapi CMS for content control and Clerk for authentication, it’s deployed on Vercel for lightning-fast performance.',
+      longDescription: 'BuilderBuddy is an intelligent resume-building platform that leverages AI to analyze user input and generate personalized, ATS-friendly resumes. Integrated with Strapi CMS for content control and Clerk for authentication, it’s deployed on Vercel for lightning-fast performance.',
       image: './projects/project1.png',
       technologies: ['React', 'Tailwind CSS', 'Shadcn UI', 'Clerk Auth', 'Gemini LLM', 'Strapi CMS', 'PostgreSQL', 'Vercel'],
       category: 'web',
@@ -228,23 +228,22 @@ const ProjectsPage: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-6 lg:gap-8"
           >
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className={`relative group cursor-pointer ${project.featured ? 'sm:col-span-2 lg:col-span-1' : ''
+                className={`relative group cursor-pointer ${project.featured ? 'col-span-1 sm:col-span-2' : ''
                   }`}
                 onClick={() => setSelectedProject(project.id)}
               >
-                <div className="relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-[500px]">
+                <div className="relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-[420px] sm:h-[450px] md:h-[480px] lg:h-[500px]">
                   {project.featured && (
                     <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-gradient-to-r from-purple-700 via-pink-600 to-violet-600 text-white text-xs font-semibold rounded-full">
                       Featured
                     </div>
-
                   )}
 
                   {project.status && (
@@ -253,7 +252,7 @@ const ProjectsPage: React.FC = () => {
                     </div>
                   )}
 
-                  <div className="relative h-48 lg:h-56 overflow-hidden">
+                  <div className="relative h-40 sm:h-48 md:h-52 lg:h-56 xl:h-60 overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -267,15 +266,15 @@ const ProjectsPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="p-6 lg:p-8">
-                    <h3 className="text-lg lg:text-xl font-bold text-white mb-3 lg:mb-4 group-hover:text-cyan-400 transition-colors">
+                  <div className="p-4 sm:p-6 lg:p-8">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2 sm:mb-3 lg:mb-4 group-hover:text-cyan-400 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-400 mb-4 lg:mb-6 line-clamp-3 text-sm lg:text-base">
+                    <p className="text-gray-400 mb-3 sm:mb-4 lg:mb-6 line-clamp-3 text-sm lg:text-base">
                       {project.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-2 mb-4 lg:mb-6">
+                    <div className="flex flex-wrap gap-2 mb-3 sm:mb-4 lg:mb-6">
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span
                           key={tech}
@@ -308,6 +307,7 @@ const ProjectsPage: React.FC = () => {
           )}
         </div>
       </section>
+
 
       {/* Project Modal */}
       {selectedProject && (
