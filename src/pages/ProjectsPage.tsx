@@ -228,15 +228,14 @@ const ProjectsPage: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-6 lg:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-6 lg:gap-8"
           >
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className={`relative group cursor-pointer ${project.featured ? 'col-span-1 sm:col-span-2' : ''
-                  }`}
+                className={`relative group cursor-pointer`}
                 onClick={() => setSelectedProject(project.id)}
               >
                 <div className="relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-[420px] sm:h-[450px] md:h-[480px] lg:h-[500px]">
