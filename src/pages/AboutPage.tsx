@@ -85,7 +85,7 @@ const AboutPage: React.FC = () => {
       name: "Framer Motion",
       proficiency: 70,
       experience: "2+ years",
-      category: "Frontend",
+      category: "Animation",
       image: "/framer.svg",
       description:
         "Framer Motion brings fluidity to the frontend. From smooth transitions to dazzling micro-interactions, I use it to breathe life into static UIs.",
@@ -184,6 +184,15 @@ const AboutPage: React.FC = () => {
       image: "/figma.png",
       description:
         "Collaborative interface design tool I use to prototype, wireframe, and create pixel-perfect UI designs. Ideal for frontend collaboration and handoff to developers.",
+    },
+    {
+      name: "GSAP",
+      proficiency: 70,
+      experience: "1+ years",
+      category: "Animation",
+      image: "/gsap.png",
+      description:
+        "A powerful JavaScript animation library I use to craft high-performance, smooth, and visually stunning animations. From micro-interactions to scroll-triggered effects, GSAP gives me full control over the animation timeline and user experience.",
     },
   ];
 
