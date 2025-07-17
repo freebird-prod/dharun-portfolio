@@ -114,7 +114,7 @@ const ProjectsPage: React.FC = () => {
       ],
       category: "entertainment",
       githubUrl: "https://github.com/freebird-prod/amaran-fanhub",
-      liveUrl: "https://amaran-fan-hub.vercel.app",
+      liveUrl: "https://amaran-fanhub.vercel.app",
       featured: true,
     },
     {
