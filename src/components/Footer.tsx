@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
     },
   };
 
-  let email = "iam.dharunkumarsh@gmail.com";
+  const email = "iam.dharunkumarsh@gmail.com";
 
   return (
     <footer className="relative overflow-hidden bg-gray-900 border-t z-0 border-gray-800">
