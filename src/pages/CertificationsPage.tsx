@@ -98,6 +98,17 @@ const CertificationsPage: React.FC = () => {
       level: "Internship",
       score: "97%",
     },
+    {
+      id: 8,
+      title: "Web Development Hackathon",
+      issuer: "Tutedude Private Limited",
+      date: "July 2025",
+      logo: "./certifications/logo7.png",
+      verifyUrl: "./certifications/certificate9.jpg",
+      skills: ["React.js", "Tailwind CSS", "Rest APIs", "PostgreSQL"],
+      level: "Hackathon",
+      score: "87%",
+    },
   ];
 
   const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
