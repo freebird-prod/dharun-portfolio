@@ -179,7 +179,7 @@ const CertificationsPage: React.FC = () => {
           >
             {[
               { label: 'Total Certifications', value: '7+', icon: BadgeCheck },
-              { label: 'Hackathons', value: '4', icon: CircuitBoard },
+              { label: 'Hackathons', value: '5', icon: CircuitBoard },
               { label: 'Interships', value: '4', icon: GraduationCap },
               { label: 'Deployed Projects', value: '8+', icon: Rocket }
 
