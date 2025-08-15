@@ -109,6 +109,22 @@ const CertificationsPage: React.FC = () => {
       level: "Hackathon",
       score: "87%",
     },
+    {
+      id: 9,
+      title: "Introduction to Prompt Engineering",
+      issuer: "Simplilearn | SkillUp",
+      date: "August 2025",
+      logo: "./certifications/logo8.png",
+      verifyUrl: "./certifications/certificate10.jpg",
+      skills: [
+        "Python",
+        "Creative Thinking",
+        "Prompt Engineering",
+        "Critical Thinking",
+      ],
+      level: "External",
+      score: "99%",
+    },
   ];
 
   const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
@@ -178,7 +194,7 @@ const CertificationsPage: React.FC = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           >
             {[
-              { label: 'Total Certifications', value: '7+', icon: BadgeCheck },
+              { label: 'Total Certifications', value: '8+', icon: BadgeCheck },
               { label: 'Hackathons', value: '5', icon: CircuitBoard },
               { label: 'Interships', value: '4', icon: GraduationCap },
               { label: 'Deployed Projects', value: '8+', icon: Rocket }
