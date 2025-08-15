@@ -208,7 +208,7 @@ const EventsPage: React.FC = () => {
       description:
         "Worked in a team of five to develop a web-based platform addressing the challenges street food vendors face in sourcing raw materials from trusted and affordable suppliers. The solution focused on building a verified vendor network, enabling bulk purchasing at competitive rates, and integrating AI-driven supplier recommendations based on price trends, quality ratings, and location proximity. Through real-world interviews and market research, the platform was tailored to streamline the supply chain, foster trust, and reduce operational costs for small-scale food entrepreneurs.",
       achievement: "Participated",
-      image: "./events/event10.jpeg",
+      image: "./events/event11.png",
       technologies: ["React.js", "Tailwind CSS", "Node.js", "PostgreSQL"],
       participants: 650,
       duration: "48 hours",
