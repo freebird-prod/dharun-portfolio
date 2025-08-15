@@ -191,15 +191,10 @@ const EventsPage: React.FC = () => {
       date: "November 2024",
       location: "Bangalore International Exhibition Centre",
       description:
-        "Participated as a team of 4 to develop an AI-powered tool that automates the generation of precise Boolean queries for the healthcare domain. The system enhances medical database searches, aiding research, diagnostics, and clinical decision-making through intelligent NLP and contextual understanding.",
+        "Collaborated in a team of five to design and develop an AI-driven farmer-friendly platform enabling farmers to sell their produce directly to consumers at their chosen prices. The solution incorporated AI-powered price recommendations, demand forecasting, and automated product descriptions to empower farmers, eliminate middlemen, and ensure fair trade. The system leveraged NLP and contextual analysis to optimize transactions and connect rural producers with urban buyers seamlessly.",
       achievement: "Participated",
       image: "./events/event10.jpeg",
-      technologies: [
-        "React.js",
-        "Tailwind CSS",
-        "Node.js",
-        "PostgreSQL",
-      ],
+      technologies: ["React.js", "Tailwind CSS", "Node.js", "PostgreSQL"],
       participants: 500,
       duration: "24 hours",
     },
