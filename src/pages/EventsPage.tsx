@@ -188,7 +188,7 @@ const EventsPage: React.FC = () => {
       title: "Google Cloud Agentic AI Hackathon",
       type: "hackathon",
       role: "Participant",
-      date: "November 2024",
+      date: "July 2025",
       location: "Bangalore International Exhibition Centre",
       description:
         "Collaborated in a team of five to design and develop an AI-driven farmer-friendly platform enabling farmers to sell their produce directly to consumers at their chosen prices. The solution incorporated AI-powered price recommendations, demand forecasting, and automated product descriptions to empower farmers, eliminate middlemen, and ensure fair trade. The system leveraged NLP and contextual analysis to optimize transactions and connect rural producers with urban buyers seamlessly.",
