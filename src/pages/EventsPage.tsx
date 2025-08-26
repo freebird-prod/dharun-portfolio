@@ -213,6 +213,36 @@ const EventsPage: React.FC = () => {
       participants: 650,
       duration: "48 hours",
     },
+    {
+      id: 12,
+      title: "Diamond Docs (Paper Presentation)",
+      type: "competition",
+      role: "Participant",
+      date: "August 2025",
+      location: "Offline Mode",
+      description:
+        "Presented a paper as part of a team of three, proposing a machine learning–based approach for predicting customer personality traits. The work explored models such as Recurrent Neural Networks (RNN) and Random Forest to analyze customer data, aiming to improve personalization, targeted marketing, and decision-making in businesses.",
+      achievement: "Participated",
+      image: "./events/event12.png",
+      technologies: ["Machine Learning", "RNN", "Random Forest", "Data Analysis"],
+      participants: 30,
+      duration: "2 hours",
+    },
+    {
+      id: 12,
+      title: "Crafting the Interface (UI/UX Design)",
+      type: "competition",
+      role: "Participant",
+      date: "August 2025",
+      location: "Offline Mode",
+      description:
+        "Worked as part of a team of two to design an entertainment-focused mobile application prototype using Figma. The project emphasized user-friendly navigation, engaging visual design, and usability principles to deliver a seamless and enjoyable user experience.",
+      achievement: "Participated",
+      image: "./events/event12.png",
+      technologies: ["UI/UX Design", "Figma", "Prototyping", "User Research"],
+      participants: 70,
+      duration: "1 hour 45 minutes",
+    }
   ];
 
   const categories = [
