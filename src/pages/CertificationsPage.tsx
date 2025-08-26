@@ -216,7 +216,7 @@ const CertificationsPage: React.FC = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           >
             {[
-              { label: 'Total Certifications', value: '8+', icon: BadgeCheck },
+              { label: 'Total Certifications', value: '12+', icon: BadgeCheck },
               { label: 'Hackathons', value: '5', icon: CircuitBoard },
               { label: 'Interships', value: '4', icon: GraduationCap },
               { label: 'Deployed Projects', value: '8+', icon: Rocket }
