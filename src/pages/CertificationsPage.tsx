@@ -136,6 +136,17 @@ const CertificationsPage: React.FC = () => {
       level: "External",
       score: "99%",
     },
+    {
+      id: 11,
+      title: "AOTS–JEC Programme Certificate",
+      issuer: "Association for Overseas Technical Cooperation and Sustainable Partnerships (AOTS)",
+      date: "June 2025",
+      logo: "./certifications/logo9.png",
+      verifyUrl: "./certifications/certificate12.jpg",
+      skills: ["Problem-Solving Skills", "Leadership", "Marketing Stratergies", "Critical Thinking"],
+      level: "External",
+      score: "100%",
+    },
   ];
 
   const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
