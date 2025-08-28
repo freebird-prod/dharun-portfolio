@@ -28,7 +28,7 @@ const ProjectsPage: React.FC = () => {
       ],
       category: "web",
       githubUrl: "https://github.com/freebird-prod/ai-resume-builder",
-      liveUrl: "https://builderbuddy.pages.dev",
+      liveUrl: "https://builderbuddy.vercel.app",
       featured: true,
     },
     {
