@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { GraduationCap, Target, Code, Zap, Brain, Rocket } from "lucide-react";
+import { GraduationCap, Target, Code, Zap, Brain, Rocket, Star, Sparkles, Globe } from "lucide-react";
 import SkillModal from "../components/SkillModal";
 import TechStackRadar from "../components/TechStackRadar";
 
@@ -269,36 +269,289 @@ const AboutPage: React.FC = () => {
     },
   };
 
+  // New variants for image animations
+  const imageVariants: Variants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.5, 
+      rotateY: -180,
+      z: -100 
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotateY: 0,
+      z: 0,
+      transition: {
+        duration: 1.2,
+        ease: "easeOut",
+        delay: 0.3,
+      },
+    },
+  };
+
+  const floatingVariants: Variants = {
+    animate: {
+      y: [-10, 10, -10],
+      rotateZ: [-2, 2, -2],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const orbitalVariants: Variants = {
+    animate: {
+      rotate: 360,
+      transition: {
+        duration: 20,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen pt-16 lg:pt-20">
-      {/* Hero Section */}
+      {/* Hero Section with Profile Image */}
       <section className="py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
+        
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                duration: 2 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-center mb-16 lg:mb-24"
+            className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-24"
           >
-            <motion.h1
+            {/* Left Side - Profile Image with Massive Animations */}
+            <motion.div
               variants={itemVariants}
-              className="text-4xl sm:text-6xl lg:text-8xl font-bold mb-6 lg:mb-8"
+              className="relative flex justify-center lg:justify-start"
             >
-              <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
-                About Me
-              </span>
-            </motion.h1>
-            <motion.p
-              variants={itemVariants}
-              className="text-xl lg:text-2xl text-gray-400 max-w-4xl mx-auto"
+              {/* Orbital rings */}
+              <motion.div
+                variants={orbitalVariants}
+                animate="animate"
+                className="absolute inset-0 w-80 h-80 lg:w-96 lg:h-96 mx-auto"
+              >
+                <div className="absolute inset-4 rounded-full border border-cyan-500/20 border-dashed"></div>
+              </motion.div>
+              
+              <motion.div
+                variants={orbitalVariants}
+                animate="animate"
+                style={{ animationDirection: 'reverse' }}
+                className="absolute inset-0 w-80 h-80 lg:w-96 lg:h-96 mx-auto"
+              >
+                <div className="absolute inset-8 rounded-full border border-violet-500/20 border-dotted"></div>
+              </motion.div>
+
+              {/* Floating orbs */}
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400 opacity-60"
+                  style={{
+                    left: `${50 + 40 * Math.cos((i * Math.PI * 2) / 6)}%`,
+                    top: `${50 + 40 * Math.sin((i * Math.PI * 2) / 6)}%`,
+                  }}
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0.6, 1, 0.6],
+                    rotate: 360,
+                  }}
+                  transition={{
+                    duration: 3 + i * 0.5,
+                    repeat: Infinity,
+                    delay: i * 0.2,
+                  }}
+                />
+              ))}
+
+              {/* Main profile image container */}
+              <motion.div
+                variants={imageVariants}
+                className="relative z-10 w-64 h-64 lg:w-80 lg:h-80"
+              >
+                <motion.div
+                  variants={floatingVariants}
+                  animate="animate"
+                  className="relative w-full h-full"
+                >
+                  {/* Gradient border */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-violet-500 to-cyan-500 p-1 bg-size-200 animate-gradient">
+                    <div className="w-full h-full rounded-full bg-gray-900 p-2">
+                      <div className="w-full h-full rounded-full bg-gradient-to-br from-cyan-400/20 to-violet-400/20 flex items-center justify-center overflow-hidden border-4 border-transparent bg-clip-padding">
+                        {/* Profile Image */}
+                        <img 
+                          src="/creator.png" 
+                          alt="Dharun Kumar S H - Portfolio Creator" 
+                          className="w-full h-full object-cover rounded-full"
+                          onError={(e) => {
+                            // Fallback to initials if image fails to load
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            target.parentElement!.innerHTML = `
+                              <div class="w-full h-full bg-gradient-to-br from-cyan-400 to-violet-600 rounded-full flex items-center justify-center text-white text-6xl lg:text-8xl font-bold shadow-2xl">
+                                DK
+                              </div>
+                            `;
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Decorative elements */}
+                  <motion.div
+                    className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-cyan-400 to-violet-400 rounded-full flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 180, 360],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                    }}
+                  >
+                    <Sparkles size={16} className="text-white" />
+                  </motion.div>
+
+                  <motion.div
+                    className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-violet-400 to-cyan-400 rounded-full flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.3, 1],
+                      rotate: [360, 180, 0],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      delay: 0.5,
+                    }}
+                  >
+                    <Star size={12} className="text-white" />
+                  </motion.div>
+
+                  <motion.div
+                    className="absolute top-1/2 -right-8 w-4 h-4 bg-gradient-to-r from-cyan-400 to-violet-400 rounded-full flex items-center justify-center"
+                    animate={{
+                      x: [0, 10, 0],
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 1,
+                    }}
+                  >
+                    <Globe size={8} className="text-white" />
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+
+              {/* Glowing effect */}
+              <motion.div
+                className="absolute inset-0 w-64 h-64 lg:w-80 lg:h-80 mx-auto rounded-full bg-gradient-to-r from-cyan-500/20 to-violet-500/20 blur-xl"
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.3, 0.6, 0.3],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </motion.div>
+
+            {/* Right Side - Hero Content */}
+            <motion.div
+              variants={containerVariants}
+              className="text-center lg:text-left space-y-6 lg:space-y-8"
             >
-              Passionate about crafting seamless React interfaces and pushing
-              the boundaries of modern web development.
-            </motion.p>
+              <motion.h1
+                variants={itemVariants}
+                className="text-4xl sm:text-6xl lg:text-7xl font-bold"
+              >
+                <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+                  About Me
+                </span>
+              </motion.h1>
+              
+              <motion.div
+                variants={itemVariants}
+                className="space-y-4"
+              >
+                <h2 className="text-2xl lg:text-3xl font-semibold text-white">
+                  Dharun Kumar S H
+                </h2>
+                <p className="text-xl lg:text-xl text-gray-400 leading-relaxed">
+                  Passionate React Developer & UI/UX Enthusiast
+                </p>
+              </motion.div>
+
+              <motion.p
+                variants={itemVariants}
+                className="text-lg lg:text-base text-gray-300 leading-relaxed max-w-2xl"
+              >
+                Passionate about crafting seamless React interfaces and pushing
+                the boundaries of modern web development. I transform ideas into
+                interactive digital experiences.
+              </motion.p>
+
+              <motion.div
+                variants={itemVariants}
+                className="flex flex-wrap gap-4 justify-center lg:justify-start"
+              >
+                {[
+                  { icon: Code, label: "React Developer", color: "from-cyan-600 to-blue-700" },
+                  { icon: Brain, label: "Problem Solver", color: "from-violet-600 to-purple-700" },
+                  { icon: Rocket, label: "Innovation Driven", color: "from-pink-600 to-red-700" },
+                ].map((badge, index) => (
+                  <motion.div
+                    key={badge.label}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${badge.color} bg-opacity-20 border border-white/10 backdrop-blur-sm`}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 + 1 }}
+                  >
+                    <badge.icon size={16} className="text-white" />
+                    <span className="text-sm font-medium text-white">{badge.label}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
           </motion.div>
 
+          {/* Main Content Grid */}
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left Side - About Content */}
             <motion.div
