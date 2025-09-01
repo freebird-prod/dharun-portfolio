@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import { Calendar, ExternalLink, X, GraduationCap, CircuitBoard, BadgeCheck, Rocket } from 'lucide-react';
+import { Calendar, ExternalLink, X, GraduationCap, CircuitBoard, BadgeCheck, Rocket, NotebookPen } from 'lucide-react';
 
 const CertificationsPage: React.FC = () => {
   const certifications = [
@@ -148,13 +148,35 @@ const CertificationsPage: React.FC = () => {
       score: "100%",
     },
     {
-      id: 11,
+      id: 12,
       title: "Frontend Developer (React) Certificate",
       issuer: "HackerRank",
-      date: "31 Aug, 2025",
+      date: "August 2025",
       logo: "./certifications/logo10.png",
       verifyUrl: "./certifications/certificate13.jpg",
       skills: ["React.js", "Frontend Development", "JavaScript", "Problem-Solving"],
+      level: "External",
+      score: "100%"
+    },
+    {
+      id: 13,
+      title: "REST API (Intermediate) Certificate",
+      issuer: "HackerRank",
+      date: "September 2025",
+      logo: "./certifications/logo10.png",
+      verifyUrl: "./certifications/certificate14.jpg",
+      skills: ["REST API", "Backend Development", "API Design", "Problem-Solving"],
+      level: "External",
+      score: "100%"
+    },
+    {
+      id: 14,
+      title: "CSS (Basic) Certificate",
+      issuer: "HackerRank",
+      date: "September 2025",
+      logo: "./certifications/logo10.png",
+      verifyUrl: "./certifications/certificate15.jpg",
+      skills: ["CSS", "Frontend Development", "Web Design", "Responsive Layouts"],
       level: "External",
       score: "100%"
     },
@@ -224,13 +246,14 @@ const CertificationsPage: React.FC = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+            className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-16"
           >
             {[
-              { label: 'Total Certifications', value: '12+', icon: BadgeCheck },
+              { label: 'Total Certifications', value: '14+', icon: BadgeCheck },
               { label: 'Hackathons', value: '5', icon: CircuitBoard },
               { label: 'Interships', value: '4', icon: GraduationCap },
-              { label: 'Deployed Projects', value: '8+', icon: Rocket }
+              { label: 'Courses', value: '2+', icon: NotebookPen },
+              { label: 'Deployed Projects', value: '9+', icon: Rocket },
 
             ].map((stat, i) => (
               <motion.div
