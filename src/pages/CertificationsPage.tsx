@@ -147,6 +147,17 @@ const CertificationsPage: React.FC = () => {
       level: "External",
       score: "100%",
     },
+    {
+      id: 11,
+      title: "Frontend Developer (React) Certificate",
+      issuer: "HackerRank",
+      date: "31 Aug, 2025",
+      logo: "./certifications/logo10.png",
+      verifyUrl: "./certifications/certificate13.jpg",
+      skills: ["React.js", "Frontend Development", "JavaScript", "Problem-Solving"],
+      level: "External",
+      score: "100%"
+    },
   ];
 
   const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
