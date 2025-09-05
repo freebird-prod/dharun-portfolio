@@ -156,18 +156,18 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 8,
-      title: "Elev Ocean - Sea Level Rise Predictor",
+      title: "Torrent Guard - Flood Analyzer & Risk Detection",
       description:
-        "Predict sea level trends using climate data and statistical models.",
+        "Analyze flood risk using coordinates or terrain images with AI-powered insights.",
       longDescription:
-        "Elev Ocean is a data-driven tool that forecasts sea level rise using statistical models like Random Forest and SVM. It features interactive charts and coastal impact visuals, helping users explore potential changes based on historical climate data. Built with Streamlit and Seaborn for a clean, user-friendly interface.",
-      image: "./projects/project8.png",
-      technologies: ["Python", "Streamlit", "Random Forest", "SVM", "Seaborn", "Render"],
+        "Flood Analyzer is an intelligent system that predicts and assesses flood risks using both geographic coordinates and terrain image analysis. It leverages AI models and geospatial data to provide detailed risk levels, elevation data, and proximity to water sources. Users receive actionable recommendations along with AI-driven explanations, making it a powerful tool for disaster preparedness and environmental monitoring. Built with Next.js, FastAPI, TailwindCSS, and deployed on Vercel/Render for scalability.",
+      image: "./projects/project10.png",
+      technologies: ["Next.js", "FastAPI", "TailwindCSS", "Gemini LLM", "Render", "Vercel"],
       category: "ai",
-      githubUrl: "https://github.com/freebird-prod/Elev-Ocean-",
-      liveUrl: "https://elev-oceanfinder.onrender.com",
-      featured: false,
-    },
+      githubUrl: "https://github.com/freebird-prod/aqua-pulse",
+      liveUrl: "https://torrent-guard.vercel.app",
+      featured: true,
+    },    
     {
       id: 9,
       title: "ForestFire - Prediction and Prevention",
