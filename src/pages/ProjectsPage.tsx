@@ -180,7 +180,7 @@ const ProjectsPage: React.FC = () => {
       category: "iot",
       status: false,
       githubUrl: "https://github.com/SANJAY222-R/ForestFire-Predictor",
-      liveUrl: "https://github.com/SANJAY222-R/ForestFire-Predictor/releases/tag/New",
+      liveUrl: "https://github.com/SANJAY222-R/ForestFire-Predictor/releases/tag/v1.0.0",
       featured: true,
     },
   ];
