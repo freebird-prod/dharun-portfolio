@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
     {
       name: "CSS3",
       proficiency: 90,
-      experience: "3+ years",
+      experience: "4+ years",
       category: "Frontend",
       image: "/css-3.png",
       description:
@@ -39,8 +39,8 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "JavaScript",
-      proficiency: 75,
-      experience: "2+ years",
+      proficiency: 70,
+      experience: "3+ years",
       category: "Frontend",
       image: "/js.png",
       description:
@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "React",
-      proficiency: 85,
+      proficiency: 95,
       experience: "2+ years",
       category: "Frontend",
       image: "/react.png",
@@ -70,7 +70,7 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "Next.js",
-      proficiency: 65,
+      proficiency: 75,
       experience: "1+ years",
       category: "Fullstack",
       image: "/next.png",
@@ -124,9 +124,9 @@ const AboutPage: React.FC = () => {
     {
       name: "PostgreSQL",
       proficiency: 90,
-      experience: "1+ years",
+      experience: "2+ years",
       category: "Database",
-      image: "/postgre.png", // Ensure you have the logo asset
+      image: "/postgre.png",
       description:
         "Reliable, relational, and robust — PostgreSQL is my go-to for structured data. From complex joins to ACID-compliant transactions, it never lets me down.",
       projects: [
