@@ -70,7 +70,7 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "Next.js",
-      proficiency: 75,
+      proficiency: 85,
       experience: "1+ years",
       category: "Fullstack",
       image: "/next.png",
@@ -83,7 +83,7 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "Framer Motion",
-      proficiency: 70,
+      proficiency: 80,
       experience: "2+ years",
       category: "Frontend",
       image: "/framer.svg",
@@ -96,7 +96,7 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "Python",
-      proficiency: 55,
+      proficiency: 60,
       experience: "4+ years",
       category: "Backend",
       image: "/python.png", // Be sure this path points to your actual asset
@@ -136,7 +136,7 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "Firebase",
-      proficiency: 50,
+      proficiency: 75,
       experience: "1+ years",
       category: "Backend",
       image: "/firebase.svg",
@@ -149,7 +149,7 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "Supabase",
-      proficiency: 70,
+      proficiency: 60,
       experience: "1+ years",
       category: "Backend",
       image: "/supabase.svg",
@@ -162,7 +162,7 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "Strapi CMS",
-      proficiency: 60,
+      proficiency: 65,
       experience: "1+ years",
       category: "Backend",
       image: "/strapi.png",
@@ -178,21 +178,12 @@ const AboutPage: React.FC = () => {
     },
     {
       name: "Figma",
-      proficiency: 75,
+      proficiency: 90,
       experience: "1+ years",
       category: "Frontend",
       image: "/figma.png",
       description:
         "Collaborative interface design tool I use to prototype, wireframe, and create pixel-perfect UI designs. Ideal for frontend collaboration and handoff to developers.",
-    },
-    {
-      name: "GSAP",
-      proficiency: 70,
-      experience: "1+ years",
-      category: "Frontend",
-      image: "/gsap.png",
-      description:
-        "A powerful JavaScript animation library I use to craft high-performance, smooth, and visually stunning animations. From micro-interactions to scroll-triggered effects, GSAP gives me full control over the animation timeline and user experience.",
     },
   ];
 

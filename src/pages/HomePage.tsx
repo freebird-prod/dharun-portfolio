@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { Download, Github, Linkedin, Instagram, ArrowRight, Twitter } from 'lucide-react';
+import { Download, Github, Linkedin, Instagram, ArrowRight, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TypewriterEffect from '../components/TypewriterEffect';
 import { useNavigate } from 'react-router-dom';
@@ -178,9 +178,9 @@ const HomePage: React.FC = () => {
                 bg: 'pink-500',
               },
               {
-                icon: Twitter,
-                href: 'https://x.com/DharunSH0302006',
-                label: 'Twitter',
+                icon: Terminal,
+                href: 'https://leetcode.com/u/dharunkumarsh/',
+                label: 'LeetCode',
                 color: 'text-cyan-400',
                 bg: 'cyan-500',
               },
