@@ -167,7 +167,7 @@ const ProjectsPage: React.FC = () => {
       githubUrl: "https://github.com/freebird-prod/aqua-pulse",
       liveUrl: "https://torrent-guard.vercel.app",
       featured: true,
-    },    
+    },
     {
       id: 9,
       title: "ForestFire - Prediction and Prevention",
@@ -183,7 +183,22 @@ const ProjectsPage: React.FC = () => {
       liveUrl: "https://github.com/SANJAY222-R/ForestFire-Predictor/releases/tag/v1.0.0",
       featured: true,
     },
-  ];
+    {
+      id: 10,
+      title: "Pixxel - AI Powered Image Editor",
+      description:
+        "Apply advanced AI-driven edits and transformations to images with a powerful, modern online editor.",
+      longDescription:
+        "Pixxel is an AI-powered image editing platform offering intelligent tools like background removal, object manipulation, and advanced filters. Built with a modern tech stack including Next.js and Convex DB for high performance, it utilizes Imagekit.io for optimized image delivery and Clerk for secure user authentication. The interface is powered by ShadCN UI for a clean, intuitive user experience.",
+      image: "/projects/project11.png",
+      technologies: ["Next.js", "Next.js API", "Convex DB", "Clerk (Auth)", "Imagekit.io", "ShadCN UI"],
+      category: "ai",
+      status: false,
+      githubUrl: "https://github.com/freebird-prod/pixxel-image-editor",
+      liveUrl: "https://pixxel-image.vercel.app",
+      featured: true,
+    }
+  ]
 
   const categories = [
     { id: 'all', label: 'All Projects' },
