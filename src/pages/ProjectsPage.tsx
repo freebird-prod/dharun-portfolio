@@ -192,10 +192,25 @@ const ProjectsPage: React.FC = () => {
         "Pixxel is an AI-powered image editing platform offering intelligent tools like background removal, object manipulation, and advanced filters. Built with a modern tech stack including Next.js and Convex DB for high performance, it utilizes Imagekit.io for optimized image delivery and Clerk for secure user authentication. The interface is powered by ShadCN UI for a clean, intuitive user experience.",
       image: "/projects/project11.png",
       technologies: ["Next.js", "Next.js API", "Convex DB", "Clerk (Auth)", "Imagekit.io", "ShadCN UI"],
-      category: "ai",
+      category: "web",
       status: false,
       githubUrl: "https://github.com/freebird-prod/pixxel-image-editor",
       liveUrl: "https://pixxel-image.vercel.app",
+      featured: true,
+    },
+    {
+      id: 11,
+      title: "Grafixion - Powerful Image Editor",
+      description:
+        "A powerful image editor with advanced edits and transformations.",
+      longDescription:
+        "Grafixion is an image editing platform offering tools like background removal, object manipulation, and advanced filters. Built with React.js, Tailwind CSS, and ShadCN UI for a clean, intuitive user experience. It utilizes Local Storage for storing user edits and preferences.",
+      image: "/projects/project12.png",
+      technologies: ["React.js", "Tailwind CSS", "ShadCN UI", "Local Storage"],
+      category: "web",
+      status: false,
+      githubUrl: "https://github.com/freebird-prod/grafixion-image-editor",
+      liveUrl: "https://grafixion.vercel.app",
       featured: true,
     }
   ]
