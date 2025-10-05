@@ -220,13 +220,13 @@ const ProjectsPage: React.FC = () => {
         "Easily create a beautiful digital portfolio with advanced edits and transformations.",
       longDescription:
         "PortfolioBuddy is a digital portfolio builder that offers a range of tools to help you create a stunning online portfolio. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. Local Storage is used to store user edits and preferences.",
-      image: "/projects/project12.png",
+      image: "/projects/project13.png",
       technologies: ["Next.js", "Next.js API", "Daisy UI", "PostgreSQL","Sequelize ORM"],
       category: "web",
       status: true,
       githubUrl: "https://github.com/freebird-prod/digital-portfolio-builder",
-      liveUrl: "https://portfolio-buddy.vercel.app",
-      featured: true,
+      liveUrl: "https://digital-portfolio-builder.vercel.app",
+      featured: false,
     }
   ]
 
