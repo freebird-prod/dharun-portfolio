@@ -212,6 +212,21 @@ const ProjectsPage: React.FC = () => {
       githubUrl: "https://github.com/freebird-prod/grafixion-image-editor",
       liveUrl: "https://grafixion.vercel.app",
       featured: true,
+    },
+    {
+      id: 12,
+      title: "PortfolioBuddy - Digital Portfolio Builder",
+      description:
+        "Easily create a beautiful digital portfolio with advanced edits and transformations.",
+      longDescription:
+        "PortfolioBuddy is a digital portfolio builder that offers a range of tools to help you create a stunning online portfolio. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. Local Storage is used to store user edits and preferences.",
+      image: "/projects/project12.png",
+      technologies: ["Next.js", "Next.js API", "Daisy UI", "PostgreSQL","Sequelize ORM"],
+      category: "web",
+      status: true,
+      githubUrl: "https://github.com/freebird-prod/digital-portfolio-builder",
+      liveUrl: "https://portfolio-buddy.vercel.app",
+      featured: true,
     }
   ]
 
