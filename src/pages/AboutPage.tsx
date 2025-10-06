@@ -809,7 +809,7 @@ const AboutPage: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
               { label: "Current Year", value: "3rd Year" },
-              { label: "CGPA", value: "8.30" },
+              { label: "CGPA", value: "8.35" },
               { label: "Programming Languages", value: "4" },
               { label: "Open Source Contributions", value: "10+" },
             ].map((stat, index) => (

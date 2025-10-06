@@ -253,7 +253,7 @@ const CertificationsPage: React.FC = () => {
               { label: 'Hackathons', value: '5', icon: CircuitBoard },
               { label: 'Interships', value: '4', icon: GraduationCap },
               { label: 'Courses', value: '2+', icon: NotebookPen },
-              { label: 'Deployed Projects', value: '9+', icon: Rocket },
+              { label: 'Deployed Projects', value: '10+', icon: Rocket },
 
             ].map((stat, i) => (
               <motion.div
