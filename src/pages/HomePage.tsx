@@ -54,8 +54,8 @@ const HomePage: React.FC = () => {
   };
 
   const stats = [
-    { label: 'Projects Completed', value: '5+' },
-    { label: 'Technologies Mastered', value: '7+' },
+    { label: 'Projects Completed', value: '8+' },
+    { label: 'Technologies Mastered', value: '5+' },
     { label: 'Hackathon Won', value: '1' },
     { label: 'Years of Experience', value: '2+' },
   ];
