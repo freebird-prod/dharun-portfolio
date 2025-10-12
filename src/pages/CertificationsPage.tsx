@@ -84,7 +84,7 @@ const CertificationsPage: React.FC = () => {
       logo: "./certifications/logo5.png",
       verifyUrl: "./certifications/certificate7.png",
       skills: ["Python", "RAG", "Database"],
-      level: "External",
+      level: "Course",
       score: "70%",
     },
     {
@@ -122,7 +122,7 @@ const CertificationsPage: React.FC = () => {
         "Prompt Engineering",
         "Critical Thinking",
       ],
-      level: "External",
+      level: "Course",
       score: "99%",
     },
     {
@@ -133,7 +133,7 @@ const CertificationsPage: React.FC = () => {
       logo: "./certifications/logo6.png",
       verifyUrl: "./certifications/certificate11.jpg",
       skills: ["React.js", "Tailwind CSS", "Rest APIs", "LocalStorage"],
-      level: "External",
+      level: "Course",
       score: "99%",
     },
     {
@@ -144,7 +144,7 @@ const CertificationsPage: React.FC = () => {
       logo: "./certifications/logo9.png",
       verifyUrl: "./certifications/certificate12.jpg",
       skills: ["Problem-Solving Skills", "Leadership", "Marketing Stratergies", "Critical Thinking"],
-      level: "External",
+      level: "Course",
       score: "100%",
     },
     {
@@ -155,7 +155,7 @@ const CertificationsPage: React.FC = () => {
       logo: "./certifications/logo10.png",
       verifyUrl: "./certifications/certificate13.jpg",
       skills: ["React.js", "Frontend Development", "JavaScript", "Problem-Solving"],
-      level: "External",
+      level: "Course",
       score: "100%"
     },
     {
@@ -166,7 +166,7 @@ const CertificationsPage: React.FC = () => {
       logo: "./certifications/logo10.png",
       verifyUrl: "./certifications/certificate14.jpg",
       skills: ["REST API", "Backend Development", "API Design", "Problem-Solving"],
-      level: "External",
+      level: "Course",
       score: "100%"
     },
     {
@@ -177,7 +177,18 @@ const CertificationsPage: React.FC = () => {
       logo: "./certifications/logo10.png",
       verifyUrl: "./certifications/certificate15.jpg",
       skills: ["CSS", "Frontend Development", "Web Design", "Responsive Layouts"],
-      level: "External",
+      level: "Course",
+      score: "100%"
+    },
+    {
+      id: 15,
+      title: "Foundation: Introduction to LangGraph",
+      issuer: "LangChain Academy",
+      date: "October 2025",
+      logo: "./certifications/logo11.png",
+      verifyUrl: "./certifications/certificate16.jpg",
+      skills: ["LangGraph", "NLP", "LLM Models"],
+      level: "Course",
       score: "100%"
     },
   ];
@@ -197,11 +208,11 @@ const CertificationsPage: React.FC = () => {
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case 'Hackathon': return 'from-lime-700 to-indigo-600';
-      case 'Internship': return 'from-cyan-700 to-red-600';
-      case 'Workshop': return 'from-amber-700 to-emerald-600';
-      case 'Industrial Visit': return 'from-fuchsia-700 to-rose-600';
-      case 'External': return 'from-zinc-700 to-slate-600';
+      case 'Hackathon': return 'from-purple-700 to-purple-900';
+      case 'Internship': return 'from-blue-700 to-blue-900';
+      case 'Workshop': return 'from-gray-700 to-gray-900';
+      case 'Industrial Visit': return 'from-yellow-700 to-yellow-900';
+      case 'Course': return 'from-red-700 to-red-900';
       default: return;
     }
   };
@@ -250,9 +261,9 @@ const CertificationsPage: React.FC = () => {
           >
             {[
               { label: 'Total Certifications', value: '14+', icon: BadgeCheck },
-              { label: 'Hackathons', value: '5', icon: CircuitBoard },
-              { label: 'Interships', value: '4', icon: GraduationCap },
-              { label: 'Courses', value: '2+', icon: NotebookPen },
+              { label: 'Hackathons', value: '7', icon: CircuitBoard },
+              { label: 'Interships', value: '3', icon: GraduationCap },
+              { label: 'Courses', value: '3+', icon: NotebookPen },
               { label: 'Deployed Projects', value: '10+', icon: Rocket },
 
             ].map((stat, i) => (
