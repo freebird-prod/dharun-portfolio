@@ -357,7 +357,7 @@ const ProjectsPage: React.FC = () => {
                   )}
 
                   {project.status && (
-                    <div className="absolute bottom-4 right-4 z-10 px-3 py-1 bg-gradient-to-r from-green-700 via-gray-700 to-orange-600 text-white text-xs font-semibold rounded-full">
+                    <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-gradient-to-r from-green-700 via-gray-700 to-orange-600 text-white text-xs font-semibold rounded-full">
                       In Progress
                     </div>
                   )}
