@@ -405,7 +405,6 @@ const AboutPage: React.FC = () => {
                           alt="Dharun Kumar S H - Portfolio Creator" 
                           className="w-full h-full object-cover rounded-full scale-[1.153]"
                           onError={(e) => {
-                            // Fallback to initials if image fails to load
                             const target = e.target as HTMLImageElement;
                             target.style.display = 'none';
                             target.parentElement!.innerHTML = `
