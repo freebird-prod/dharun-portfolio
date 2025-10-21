@@ -232,7 +232,7 @@ const ProjectsPage: React.FC = () => {
       id: 13,
       title: "NeuraLife - AI-Powered Mental Health Companion",
       description:
-        "A mental health companion app that provides personalized support and resources.",
+        "A mental health companion that provides personalized support and resources.",
       longDescription:
         "NeuraLife is an AI-powered mental health companion that offers personalized support and resources to users. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. The app utilizes machine learning algorithms to analyze user input and deliver tailored content and recommendations.",
       image: "/projects/project14.png",
