@@ -29,7 +29,7 @@ const ProjectsPage: React.FC = () => {
       category: "web",
       githubUrl: "https://github.com/freebird-prod/ai-resume-builder",
       liveUrl: "https://builderbuddy.vercel.app",
-      featured: true,
+      featured: false,
     },
     {
       id: 2,
@@ -152,7 +152,7 @@ const ProjectsPage: React.FC = () => {
       category: "entertainment",
       githubUrl: "https://github.com/freebird-prod/movie-app",
       liveUrl: "https://popcorn-path.vercel.app",
-      featured: true,
+      featured: false,
     },
     {
       id: 8,
@@ -166,7 +166,7 @@ const ProjectsPage: React.FC = () => {
       category: "ai",
       githubUrl: "https://github.com/freebird-prod/aqua-pulse",
       liveUrl: "https://torrent-guard.vercel.app",
-      featured: true,
+      featured: false,
     },
     {
       id: 9,
@@ -196,7 +196,7 @@ const ProjectsPage: React.FC = () => {
       status: false,
       githubUrl: "https://github.com/freebird-prod/pixxel-image-editor",
       liveUrl: "https://pixxel-image.vercel.app",
-      featured: true,
+      featured: false,
     },
     {
       id: 11,
@@ -211,7 +211,7 @@ const ProjectsPage: React.FC = () => {
       status: false,
       githubUrl: "https://github.com/freebird-prod/grafixion-image-editor",
       liveUrl: "https://grafixion.vercel.app",
-      featured: true,
+      featured: false,
     },
     {
       id: 12,
@@ -221,19 +221,34 @@ const ProjectsPage: React.FC = () => {
       longDescription:
         "PortfolioBuddy is a digital portfolio builder that offers a range of tools to help you create a stunning online portfolio. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. Local Storage is used to store user edits and preferences.",
       image: "/projects/project13.png",
-      technologies: ["Next.js", "Next.js API", "Daisy UI", "PostgreSQL","Sequelize ORM"],
+      technologies: ["Next.js", "Next.js API", "Daisy UI", "PostgreSQL", "Sequelize ORM"],
       category: "web",
       status: true,
       githubUrl: "https://github.com/freebird-prod/digital-portfolio-builder",
       liveUrl: "https://digital-portfolio-builder.vercel.app",
       featured: false,
+    },
+    {
+      id: 13,
+      title: "NeuraLife - AI-Powered Mental Health Companion",
+      description:
+        "A mental health companion app that provides personalized support and resources.",
+      longDescription:
+        "NeuraLife is an AI-powered mental health companion that offers personalized support and resources to users. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. The app utilizes machine learning algorithms to analyze user input and deliver tailored content and recommendations.",
+      image: "/projects/project14.png",
+      technologies: ["Next.js", "Tailwind CSS", "Next.js API", "ShadCN UI", "Firebase", "Openrouter LLM"],
+      category: "web",
+      status: true,
+      githubUrl: "https://github.com/freebird-prod/neura-life",
+      liveUrl: "https://neura-life.vercel.app",
+      featured: true,
     }
   ]
 
   const categories = [
     { id: 'all', label: 'All Projects' },
-    { id: 'web', label: 'Web Development' },
-    { id: 'ai', label: 'AI/ML' },
+    { id: 'web', label: 'Full Stack Web App' },
+    { id: 'ai', label: 'Machine Learning' },
     { id: 'iot', label: 'IoT' },
     { id: 'entertainment', label: 'Entertainment' },
   ];
