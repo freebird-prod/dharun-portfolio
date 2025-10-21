@@ -238,7 +238,7 @@ const ProjectsPage: React.FC = () => {
       image: "/projects/project14.png",
       technologies: ["Next.js", "Tailwind CSS", "Next.js API", "ShadCN UI", "Firebase", "Openrouter LLM"],
       category: "web",
-      status: true,
+      status: false,
       githubUrl: "https://github.com/freebird-prod/neura-life",
       liveUrl: "https://neura-life.vercel.app",
       featured: true,
