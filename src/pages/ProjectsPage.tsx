@@ -242,6 +242,21 @@ const ProjectsPage: React.FC = () => {
       githubUrl: "https://github.com/freebird-prod/neura-life",
       liveUrl: "https://neura-life.vercel.app",
       featured: true,
+    },
+    {
+      id: 14,
+      title: "FlowFund - Expense Tracker and Budget Planner",
+      description:
+        "An expense tracker and budget planner that helps users manage their finances.",
+      longDescription:
+        "FlowFund is an expense tracker and budget planner that helps users manage their finances. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. The app utilizes machine learning algorithms to analyze user input and deliver tailored content and recommendations.",
+      image: "/projects/project15.png",
+      technologies: ["Next.js", "Tailwind CSS", "Next.js API", "ShadCN UI", "PostgreSQL", "Drizzle ORM"],
+      category: "web",
+      status: false,
+      githubUrl: "https://github.com/freebird-prod/expenses-tracker",
+      liveUrl: "https://flow-funder.vercel.app",
+      featured: true,
     }
   ]
 
