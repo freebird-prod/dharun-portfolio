@@ -191,6 +191,17 @@ const CertificationsPage: React.FC = () => {
       level: "Course",
       score: "100%"
     },
+    {
+      id: 16,
+      title: "AI in Education with Gemini",
+      issuer: "Gemini for Education",
+      date: "December 2025",
+      logo: "./certifications/logo12.png",
+      verifyUrl: "./certifications/certificate17.png",
+      skills: ["AI in Education", "Gemini AI", "LLM Models"],
+      level: "Course",
+      score: "100%"
+    },
   ];
 
   const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
