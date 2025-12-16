@@ -99,7 +99,7 @@ const CertificationsPage: React.FC = () => {
       score: "97%",
     },
     {
-      id: 8,
+      id: 9,
       title: "Web Development Hackathon",
       issuer: "Tutedude Private Limited",
       date: "July 2025",
@@ -110,7 +110,7 @@ const CertificationsPage: React.FC = () => {
       score: "87%",
     },
     {
-      id: 9,
+      id: 10,
       title: "Introduction to Prompt Engineering",
       issuer: "Simplilearn | SkillUp",
       date: "August 2025",
@@ -126,7 +126,7 @@ const CertificationsPage: React.FC = () => {
       score: "99%",
     },
     {
-      id: 10,
+      id: 11,
       title: "Internship Certificate",
       issuer: "Tripletsoft LLC",
       date: "July 2025",
@@ -137,7 +137,7 @@ const CertificationsPage: React.FC = () => {
       score: "99%",
     },
     {
-      id: 11,
+      id: 12,
       title: "AOTS–JEC Programme Certificate",
       issuer: "Association for Overseas Technical Cooperation and Sustainable Partnerships (AOTS)",
       date: "June 2025",
@@ -148,7 +148,7 @@ const CertificationsPage: React.FC = () => {
       score: "100%",
     },
     {
-      id: 12,
+      id: 13,
       title: "Frontend Developer (React) Certificate",
       issuer: "HackerRank",
       date: "August 2025",
@@ -159,7 +159,7 @@ const CertificationsPage: React.FC = () => {
       score: "100%"
     },
     {
-      id: 13,
+      id: 14,
       title: "REST API (Intermediate) Certificate",
       issuer: "HackerRank",
       date: "September 2025",
@@ -170,7 +170,7 @@ const CertificationsPage: React.FC = () => {
       score: "100%"
     },
     {
-      id: 14,
+      id: 15,
       title: "CSS (Basic) Certificate",
       issuer: "HackerRank",
       date: "September 2025",
@@ -181,7 +181,7 @@ const CertificationsPage: React.FC = () => {
       score: "100%"
     },
     {
-      id: 15,
+      id: 16,
       title: "Foundation: Introduction to LangGraph",
       issuer: "LangChain Academy",
       date: "October 2025",
@@ -192,13 +192,24 @@ const CertificationsPage: React.FC = () => {
       score: "100%"
     },
     {
-      id: 16,
+      id: 17,
       title: "AI in Education with Gemini",
       issuer: "Gemini for Education",
       date: "December 2025",
       logo: "./certifications/logo12.png",
       verifyUrl: "./certifications/certificate17.png",
       skills: ["AI in Education", "Gemini AI", "LLM Models"],
+      level: "Course",
+      score: "100%"
+    },
+    {
+      id: 18,
+      title: "Critical Thinking in the AI Era",
+      issuer: "HP LIFE & HP Foundation",
+      date: "December 2025",
+      logo: "./certifications/logo13.png",
+      verifyUrl: "./certifications/certificate18.jpg",
+      skills: ["Critical Thinking", "Decision-Making", "AI Content Analysis", "Bias Mitigation", "Fact-Checking"],
       level: "Course",
       score: "100%"
     },
