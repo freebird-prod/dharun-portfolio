@@ -215,18 +215,18 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 12,
-      title: "PortfolioBuddy - Digital Portfolio Builder",
+      title: "DigiFolio - Digital Portfolio Builder",
       description:
         "Easily create a beautiful digital portfolio with advanced edits and transformations.",
       longDescription:
-        "PortfolioBuddy is a digital portfolio builder that offers a range of tools to help you create a stunning online portfolio. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. Local Storage is used to store user edits and preferences.",
-      image: "/projects/project13.png",
-      technologies: ["Next.js", "Next.js API", "Daisy UI", "PostgreSQL", "Sequelize ORM"],
+        "DigiFolio is a digital portfolio builder that offers a range of tools to help you create a stunning online portfolio. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. Local Storage is used to store user edits and preferences.",
+      image: "/projects/project16.png",
+      technologies: ["Next.js", "Next.js API", "Daisy UI", "PostgreSQL", "Drizzle ORM", "ReCharts"],
       category: "web",
-      status: true,
-      githubUrl: "https://github.com/freebird-prod/digital-portfolio-builder",
-      liveUrl: "https://digital-portfolio-builder.vercel.app",
-      featured: false,
+      status: false,
+      githubUrl: "https://github.com/freebird-prod/digi-folio",
+      liveUrl: "https://folio-builder.vercel.app",
+      featured: true,
     },
     {
       id: 13,
