@@ -157,9 +157,9 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 10,
-      title: "Grafixion - Powerful Image Editor",
+      title: "Grafixion - Simple Image Editor",
       description:
-        "A powerful image editor with advanced edits and transformations.",
+        "A simple image editor with advanced edits and transformations.",
       longDescription:
         "Grafixion is an image editing platform offering tools like background removal, object manipulation, and advanced filters. Built with React.js, Tailwind CSS, and ShadCN UI for a clean, intuitive user experience. It utilizes Local Storage for storing user edits and preferences.",
       image: "/projects/project12.png",
@@ -172,17 +172,17 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 11,
-      title: "DigiFolio - Digital Portfolio Builder",
+      title: "Creafolio - Digital Portfolio Builder",
       description:
         "Easily create a beautiful digital portfolio with advanced edits and transformations.",
       longDescription:
-        "DigiFolio is a digital portfolio builder that offers a range of tools to help you create a stunning online portfolio. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. Local Storage is used to store user edits and preferences.",
+        "Creafolio is a digital portfolio builder that offers a range of tools to help you create a stunning online portfolio. Built with React.js, Tailwind CSS, and ShadCN UI, it provides a clean and intuitive user experience. Local Storage is used to store user edits and preferences.",
       image: "/projects/project16.png",
       technologies: ["Next.js", "Next.js API", "Daisy UI", "PostgreSQL", "Drizzle ORM", "ReCharts"],
       category: "web",
       status: false,
-      githubUrl: "https://github.com/freebird-prod/digi-folio",
-      liveUrl: "https://folio-builder.vercel.app",
+      githubUrl: "https://github.com/freebird-prod/creafolio  ",
+      liveUrl: "https://creafolio.vercel.app",
       featured: true,
     },
     {
