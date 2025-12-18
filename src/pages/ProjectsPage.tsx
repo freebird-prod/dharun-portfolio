@@ -98,27 +98,6 @@ const ProjectsPage: React.FC = () => {
       featured: true,
     },
     {
-      id: 5,
-      title: "Brand Mint - Logo Maker",
-      description:
-        "Design beautiful, custom logos with full creative control—no design experience needed.",
-      longDescription:
-        "Brand Mint is a modern logo creation tool that empowers users to craft unique, high-quality logos manually. Featuring an intuitive interface with customizable icons, fonts, and color palettes, it makes branding accessible to everyone. Export high-resolution logos with ease using built-in canvas tools—perfect for startups, freelancers, and creators building their visual identity from scratch.",
-      image: "./projects/project6.png",
-      technologies: [
-        "React.js",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Local Storage",
-        "HTML2Canvas",
-        "Vercel"
-      ],
-      category: "web",
-      githubUrl: "https://github.com/freebird-prod",
-      liveUrl: "https://brand-mint.vercel.app",
-      featured: false,
-    },
-    {
       id: 6,
       title: "Popcorn Path - Movie Finder",
       description:
