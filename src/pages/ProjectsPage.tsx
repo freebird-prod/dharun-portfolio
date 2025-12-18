@@ -33,28 +33,6 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 2,
-      title: "AI-Powered Content Generator",
-      description:
-        "Revolutionize our content creation with our Al-Powered app, delivering engaging and high-quality text in seconds.",
-      longDescription:
-        "An AI-powered content generation platform that delivers intelligent, high-quality text outputs tailored to user needs. Features include real-time content generation tools, contextual rewriting, and seamless multi-language support, all driven by cutting-edge machine learning models.",
-      image: "./projects/project2.png",
-      technologies: [
-        "Next.js",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Clerk Auth",
-        "Gemini LLM",
-        "Neon PostgreSQL",
-        "Vercel",
-      ],
-      category: "web",
-      githubUrl: "https://github.com/freebird-prod",
-      liveUrl: "https://ai-content-gen-freebird.vercel.app",
-      featured: false,
-    },
-    {
-      id: 3,
       title: "AI-Powered Image Generator",
       description:
         "Generate stunning visuals from text prompts using cutting-edge AI models.",
@@ -74,7 +52,7 @@ const ProjectsPage: React.FC = () => {
       featured: false,
     },
     {
-      id: 4,
+      id: 3,
       title: "AI-Powered Resume Analyzer",
       description:
         "Smart resume screening tool that extracts skills and analyzes job fit using AI.",
@@ -99,7 +77,7 @@ const ProjectsPage: React.FC = () => {
       featured: true,
     },
     {
-      id: 5,
+      id: 4,
       title: "Amaran Fanhub - Fan Website",
       description:
         "A vibrant community portal celebrating actor Amaran’s legacy with media, news, and fan interactions.",
@@ -120,7 +98,7 @@ const ProjectsPage: React.FC = () => {
       featured: true,
     },
     {
-      id: 6,
+      id: 5,
       title: "Brand Mint - Logo Maker",
       description:
         "Design beautiful, custom logos with full creative control—no design experience needed.",
@@ -141,7 +119,7 @@ const ProjectsPage: React.FC = () => {
       featured: false,
     },
     {
-      id: 7,
+      id: 6,
       title: "Popcorn Path - Movie Finder",
       description:
         "Discover trending movies, browse genres, and track your watchlist with ease.",
@@ -155,7 +133,7 @@ const ProjectsPage: React.FC = () => {
       featured: false,
     },
     {
-      id: 8,
+      id: 7,
       title: "Torrent Guard - Flood Analyzer & Risk Detection",
       description:
         "Analyze flood risk using coordinates or terrain images with AI-powered insights.",
@@ -169,7 +147,7 @@ const ProjectsPage: React.FC = () => {
       featured: false,
     },
     {
-      id: 9,
+      id: 8,
       title: "ForestFire - Prediction and Prevention",
       description:
         "Monitor and predict forest fire risks using environmental data and machine learning.",
@@ -184,7 +162,7 @@ const ProjectsPage: React.FC = () => {
       featured: true,
     },
     {
-      id: 10,
+      id: 9,
       title: "Pixxel - AI Powered Image Editor",
       description:
         "Apply advanced AI-driven edits and transformations to images with a powerful, modern online editor.",
@@ -199,7 +177,7 @@ const ProjectsPage: React.FC = () => {
       featured: false,
     },
     {
-      id: 11,
+      id: 10,
       title: "Grafixion - Powerful Image Editor",
       description:
         "A powerful image editor with advanced edits and transformations.",
@@ -214,7 +192,7 @@ const ProjectsPage: React.FC = () => {
       featured: false,
     },
     {
-      id: 12,
+      id: 11,
       title: "DigiFolio - Digital Portfolio Builder",
       description:
         "Easily create a beautiful digital portfolio with advanced edits and transformations.",
@@ -229,7 +207,7 @@ const ProjectsPage: React.FC = () => {
       featured: true,
     },
     {
-      id: 13,
+      id: 12,
       title: "NeuraLife - AI-Powered Mental Health Companion",
       description:
         "A mental health companion that provides personalized support and resources.",
@@ -244,7 +222,7 @@ const ProjectsPage: React.FC = () => {
       featured: true,
     },
     {
-      id: 14,
+      id: 13,
       title: "FlowFund - Expense Tracker and Budget Planner",
       description:
         "An expense tracker and budget planner that helps users manage their finances.",
