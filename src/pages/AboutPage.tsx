@@ -262,11 +262,11 @@ const AboutPage: React.FC = () => {
 
   // New variants for image animations
   const imageVariants: Variants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.5, 
+    hidden: {
+      opacity: 0,
+      scale: 0.5,
       rotateY: -180,
-      z: -100 
+      z: -100
     },
     visible: {
       opacity: 1,
@@ -309,7 +309,7 @@ const AboutPage: React.FC = () => {
       {/* Hero Section with Profile Image */}
       <section className="py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
-        
+
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
@@ -353,7 +353,7 @@ const AboutPage: React.FC = () => {
               >
                 <div className="absolute inset-4 rounded-full border border-cyan-500/20 border-dashed"></div>
               </motion.div>
-              
+
               <motion.div
                 variants={orbitalVariants}
                 animate="animate"
@@ -398,20 +398,20 @@ const AboutPage: React.FC = () => {
                   {/* Gradient border */}
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-violet-500 to-cyan-500 p-1 bg-size-200 animate-gradient">
                     <div className="w-full h-full rounded-full bg-gray-900 p-2">
-                      <div className="w-full h-full rounded-full bg-gradient-to-br from-cyan-400/20 to-violet-400/20 flex items-center justify-center overflow-hidden border-4 border-transparent bg-clip-padding">
+                      <div className="w-full h-full rounded-full bg-gradient-to-br from-cyan-400/20 to-violet-400/20 flex items-center justify-center overflow-hidden">
                         {/* Profile Image */}
-                        <img 
-                          src="/creator.png" 
-                          alt="Dharun Kumar S H - Portfolio Creator" 
-                          className="w-full h-full object-cover rounded-full scale-[1.153]"
+                        <img
+                          src="/creator.png"
+                          alt="Dharun Kumar S H - Portfolio Creator"
+                          className="w-full h-full object-cover object-top rounded-full"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.style.display = 'none';
                             target.parentElement!.innerHTML = `
-                              <div class="w-full h-full bg-gradient-to-br from-cyan-400 to-violet-600 rounded-full flex items-center justify-center text-white text-6xl lg:text-8xl font-bold shadow-2xl">
-                                DK
-                              </div>
-                            `;
+                          <div class="w-full h-full bg-gradient-to-br from-cyan-400 to-violet-600 rounded-full flex items-center justify-center text-white text-6xl lg:text-8xl font-bold">
+                          DK
+                          </div>
+                          `;
                           }}
                         />
                       </div>
@@ -493,7 +493,7 @@ const AboutPage: React.FC = () => {
                   About Me
                 </span>
               </motion.h1>
-              
+
               <motion.div
                 variants={itemVariants}
                 className="space-y-4"
