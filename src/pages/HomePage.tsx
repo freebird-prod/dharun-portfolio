@@ -158,7 +158,7 @@ const HomePage: React.FC = () => {
             {[
               {
                 icon: Github,
-                href: 'https://github.com/freebird-prod',
+                href: 'https://github.com/dharunkumar-sh',
                 label: 'GitHub',
                 color: 'text-gray-500',
                 bg: 'gray-600',
