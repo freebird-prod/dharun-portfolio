@@ -19,10 +19,10 @@ const HomePage: React.FC = () => {
   const navigate = useNavigate();
 
   const typewriterWords = [
-    'Composing sleek UIs with React...',
+    'Composing sleek UIs with React and Next.js...',
     'Hooking into interactivity...',
     'Turning components into experiences...',
-    'Writing clean JSX like poetry...',
+    'Writing clean JSX and TSX like poetry...',
     'Managing state, like a boss...',
     'Building fast, responsive apps...',
     'Breaking the UI into reusable pieces...',
@@ -54,10 +54,10 @@ const HomePage: React.FC = () => {
   };
 
   const stats = [
-    { label: 'Projects Completed', value: '8+' },
-    { label: 'Technologies Mastered', value: '5+' },
+    { label: 'Projects Completed', value: '10+' },
+    { label: 'Technologies Mastered', value: '3+' },
     { label: 'Hackathon Won', value: '1' },
-    { label: 'Years of Experience', value: '2+' },
+    { label: 'Years of Experience', value: '1.5+' },
   ];
 
   const getTailwindColor = (color: string): string => {

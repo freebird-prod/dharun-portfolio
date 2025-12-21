@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { GraduationCap, Target, Code, Zap, Brain, Rocket, Star, Sparkles, Globe } from "lucide-react";
+import { GraduationCap, Target, Code, Zap, Brain, Rocket, Star, Sparkles, Globe, GitBranchPlus, EarthLock, Users } from "lucide-react";
 import SkillModal from "../components/SkillModal";
 import TechStackRadar from "../components/TechStackRadar";
 
 const AboutPage: React.FC = () => {
-  const [selectedSkill, setSelectedSkill] = useState<any>(null);
+  const [selectedSkill, setSelectedSkill] = useState<unknown>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const skillsData = [
@@ -420,7 +420,7 @@ const AboutPage: React.FC = () => {
 
                   {/* Decorative elements */}
                   <motion.div
-                    className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-cyan-400 to-violet-400 rounded-full flex items-center justify-center"
+                    className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
                     animate={{
                       scale: [1, 1.2, 1],
                       rotate: [0, 180, 360],
@@ -430,11 +430,11 @@ const AboutPage: React.FC = () => {
                       repeat: Infinity,
                     }}
                   >
-                    <Sparkles size={16} className="text-white" />
+                    <GitBranchPlus size={16} className="text-white" />
                   </motion.div>
 
                   <motion.div
-                    className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-violet-400 to-cyan-400 rounded-full flex items-center justify-center"
+                    className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600  rounded-full flex items-center justify-center"
                     animate={{
                       scale: [1, 1.3, 1],
                       rotate: [360, 180, 0],
@@ -445,7 +445,7 @@ const AboutPage: React.FC = () => {
                       delay: 0.5,
                     }}
                   >
-                    <Star size={12} className="text-white" />
+                    <EarthLock size={16} className="text-white" />
                   </motion.div>
 
                   <motion.div
@@ -517,12 +517,14 @@ const AboutPage: React.FC = () => {
 
               <motion.div
                 variants={itemVariants}
-                className="flex flex-wrap gap-4 justify-center lg:justify-start"
+                className="flex flex-wrap flex-row gap-4 justify-center lg:justify-start"
               >
                 {[
-                  { icon: Code, label: "React Developer", color: "from-cyan-600 to-blue-700" },
-                  { icon: Brain, label: "Problem Solver", color: "from-violet-600 to-purple-700" },
-                  { icon: Rocket, label: "Innovation Driven", color: "from-pink-600 to-red-700" },
+                  { icon: GraduationCap, label: " Self Learner", color: "from-cyan-600 to-teal-700" },
+                  { icon: Rocket, label: "Creative Thinker", color: "from-pink-700 to-red-800" },
+                  { icon: Users, label: "Team Worker", color: "from-amber-700 to-lime-800" },
+                  { icon: Users, label: "Quick Learner", color: "from-rose-600 to-indigo-800" },
+                  { icon: Users, label: "Problem Solver", color: "from-sky-600 to-emerald-800" },
                 ].map((badge, index) => (
                   <motion.div
                     key={badge.label}
@@ -732,22 +734,22 @@ const AboutPage: React.FC = () => {
                     area: "Frontend Development",
                     percentage: 95,
                     description:
-                      "React, Next.js, Tailwind CSS, Framer Motion, Figma, GSAP",
+                      "React.js, Next.js, Tailwind CSS, Framer Motion, Shadcn UI, Daisy UI",
                   },
                   {
                     area: "Backend Development",
-                    percentage: 60,
+                    percentage: 65,
                     description: "Node.js, Python (Flask), APIs, JWT Token",
                   },
                   {
                     area: "Database Management",
-                    percentage: 70,
-                    description: "PostgreSQL, Firebase, Supabase, Strapi CMS",
+                    percentage: 75,
+                    description: "PostgreSQL, Firebase, Supabase, Convex, Strapi CMS",
                   },
                   {
                     area: "DevOps & Cloud",
-                    percentage: 50,
-                    description: "AWS, Azure, Docker",
+                    percentage: 55,
+                    description: "Google Cloud Platform, Vercel, Netlify, Docker",
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -808,8 +810,8 @@ const AboutPage: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
               { label: "Current Year", value: "3rd Year" },
-              { label: "CGPA", value: "8.35" },
-              { label: "Programming Languages", value: "4" },
+              { label: "CGPA", value: "8.44" },
+              { label: "Programming Languages", value: "3" },
               { label: "Open Source Contributions", value: "10+" },
             ].map((stat, index) => (
               <motion.div
