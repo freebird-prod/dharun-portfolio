@@ -177,6 +177,22 @@ const AboutPage: React.FC = () => {
       ],
     },
     {
+      name: "Convex DB",
+      proficiency: 60,
+      experience: "1+ years",
+      category: "Backend",
+      image: "/convex.png",
+      description:
+        "Serverless database and backend platform that simplifies building real-time apps. I use Convex to handle data sync, authentication, and business logic with ease.",
+      projects: [
+        {
+          name: "AI-Powered Resume Builder",
+          url: "https://builderbuddy.vercel.app",
+        },
+        { name: "Blog API with Roles", url: "#" },
+      ],
+    },
+    {
       name: "Figma",
       proficiency: 90,
       experience: "1+ years",
