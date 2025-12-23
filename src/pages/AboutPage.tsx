@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { GraduationCap, Target, Code, Zap, Brain, Rocket, Star, Sparkles, Globe, GitBranchPlus, EarthLock, Users } from "lucide-react";
+import { GraduationCap, Target, Code, Zap, Brain, Rocket, Globe, GitBranchPlus, EarthLock, Users } from "lucide-react";
 import SkillModal from "../components/SkillModal";
 import TechStackRadar from "../components/TechStackRadar";
 
@@ -99,7 +100,7 @@ const AboutPage: React.FC = () => {
       proficiency: 60,
       experience: "4+ years",
       category: "Backend",
-      image: "/python.png", // Be sure this path points to your actual asset
+      image: "/python.png",
       description:
         "Clean, elegant, and wildly powerful — Python is my go-to for everything from backend APIs to automation and AI. When readability meets capability, magic happens.",
       projects: [
@@ -417,7 +418,7 @@ const AboutPage: React.FC = () => {
                       <div className="w-full h-full rounded-full bg-gradient-to-br from-cyan-400/20 to-violet-400/20 flex items-center justify-center overflow-hidden">
                         {/* Profile Image */}
                         <img
-                          src="/creator.png"
+                          src="/creator.webp"
                           alt="Dharun Kumar S H - Portfolio Creator"
                           className="w-full h-full object-cover object-top rounded-full"
                           onError={(e) => {

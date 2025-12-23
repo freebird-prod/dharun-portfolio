@@ -5,11 +5,11 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ParticleBackground from './components/ParticleBackground';
-import PageLoader from './components/PageLoader';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
@@ -19,19 +19,19 @@ import ContactPage from './pages/ContactPage';
 
 function AppContent(): JSX.Element {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3500);
-    return () => clearTimeout(timer);
+    setMounted(true);
   }, []);
 
-  if (isLoading) {
-    return <PageLoader />;
-  }
-
   return (
-    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden select-none">
+    <motion.div
+      className="min-h-screen bg-gray-900 text-white overflow-x-hidden select-none"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: mounted ? 1 : 0, y: mounted ? 0 : 12 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       <ParticleBackground />
 
       <Toaster
@@ -56,7 +56,7 @@ function AppContent(): JSX.Element {
       </main>
 
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

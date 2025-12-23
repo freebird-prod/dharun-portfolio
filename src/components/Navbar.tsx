@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { LayoutGroup, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
@@ -25,6 +25,10 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -60,28 +64,34 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <div className="flex items-center space-x-8">
-              {navItems.map((item) => (
-                <motion.div key={item.path} className="relative">
-                  <Link
-                    to={item.path}
-                    className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 ${isActive(item.path)
-                      ? 'text-cyan-400'
-                      : 'text-gray-300 hover:text-cyan-400'
-                      }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                    {isActive(item.path) && (
-                      <motion.div
-                        layoutId="navbar-indicator"
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-400 to-violet-400 rounded-full"
-                      />
-                    )}
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
+            <LayoutGroup id="desktop-tubelight">
+              <div className="flex items-center space-x-4 rounded-full bg-gray-900/60 px-2 py-2 border border-cyan-500/10 shadow-[0_0_20px_rgba(6,182,212,0.08)]">
+                {navItems.map((item) => {
+                  const active = isActive(item.path);
+
+                  return (
+                    <motion.div key={item.path} className="relative">
+                      <Link
+                        to={item.path}
+                        className={`relative block px-4 py-2 text-sm font-semibold tracking-wide rounded-full transition-colors duration-200 ${active
+                          ? 'text-cyan-200'
+                          : 'text-gray-300 hover:text-cyan-200'
+                          }`}
+                      >
+                        {active && (
+                          <motion.span
+                            layoutId="tubelight"
+                            className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 via-cyan-400/10 to-violet-500/20 border border-cyan-400/25 shadow-[0_0_25px_rgba(6,182,212,0.25)]"
+                            transition={{ type: 'spring', stiffness: 280, damping: 26 }}
+                          />
+                        )}
+                        <span className="relative z-10">{item.label}</span>
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </LayoutGroup>
           </div>
 
           {/* Mobile menu button */}
@@ -107,26 +117,38 @@ const Navbar: React.FC = () => {
         transition={{ duration: 0.3 }}
         className="lg:hidden bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/20 overflow-hidden"
       >
-        <div className="px-4 pt-2 pb-6 space-y-2">
-          {navItems.map((item) => (
-            <motion.div
-              key={item.path}
-              whileHover={{ x: 5 }}
-              className="block"
-            >
-              <Link
-                to={item.path}
-                className={`block px-4 py-3 text-base font-medium transition-colors duration-200 rounded-lg ${isActive(item.path)
-                  ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
-                  : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/5'
-                  }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+        <LayoutGroup id="mobile-tubelight">
+          <div className="px-4 pt-2 pb-6 space-y-2">
+            {navItems.map((item) => {
+              const active = isActive(item.path);
+
+              return (
+                <motion.div
+                  key={item.path}
+                  whileHover={{ x: 6 }}
+                  className="relative block"
+                >
+                  <Link
+                    to={item.path}
+                    className={`relative block px-4 py-3 text-base font-semibold transition-colors duration-200 rounded-xl overflow-hidden ${active
+                      ? 'text-cyan-200'
+                      : 'text-gray-300 hover:text-cyan-200'
+                      }`}
+                  >
+                    {active && (
+                      <motion.span
+                        layoutId="mobile-tubelight"
+                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/15 via-cyan-400/10 to-violet-500/15 border border-cyan-400/20 shadow-[0_0_18px_rgba(6,182,212,0.22)]"
+                        transition={{ type: 'spring', stiffness: 280, damping: 26 }}
+                      />
+                    )}
+                    <span className="relative z-10">{item.label}</span>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        </LayoutGroup>
       </motion.div>
     </motion.nav>
   );
