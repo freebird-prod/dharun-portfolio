@@ -58,6 +58,7 @@ const SkillModal: React.FC<SkillModalProps> = ({ skill, onClose, isOpen }) => {
                   <img
                     src={skill.image}
                     alt={skill.name}
+                    loading="lazy"
                     className="w-auto h-[10rem] mx-auto object-contain"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = '/fallback.png';

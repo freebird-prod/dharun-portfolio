@@ -328,7 +328,12 @@ const CertificationsPage: React.FC = () => {
 
               {/* Content */}
               <div className="flex gap-4 mb-4">
-                <img src={cert.logo} alt={cert.issuer} className="w-16 h-16 rounded-xl object-cover" />
+                <img
+                  src={cert.logo}
+                  alt={cert.issuer}
+                  loading="lazy"
+                  className="w-16 h-16 rounded-xl object-cover"
+                />
                 <div>
                   <h3 className="text-lg font-bold text-white">{cert.title}</h3>
                   <p className="text-cyan-400 text-sm">{cert.issuer}</p>
@@ -396,6 +401,7 @@ const CertificationsPage: React.FC = () => {
                 <img
                   src={selectedCert.verifyUrl}
                   alt="Certificate"
+                  loading="lazy"
                   className="max-w-full max-h-[70vh] rounded-lg object-contain"
                 />
               </div>

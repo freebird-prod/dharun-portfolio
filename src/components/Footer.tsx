@@ -100,7 +100,12 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <motion.div variants={itemVariants} className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <img src="/logo.svg" alt="Logo" className="h-5 w-auto" />
+              <img
+                src="/logo.svg"
+                alt="Logo"
+                loading="lazy"
+                className="h-5 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Aspiring React Developer passionate about building modern,

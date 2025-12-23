@@ -315,6 +315,7 @@ const AboutPage: React.FC = () => {
                         <img
                           src={skill.image}
                           alt={skill.name}
+                          loading="lazy"
                           className="w-12 h-12 object-contain"
                           onError={(e) => {
                             (e.target as HTMLImageElement).src = "/fallback.png";

@@ -50,6 +50,7 @@ const Navbar: React.FC = () => {
                 <img
                   src="/logo.svg"
                   alt="Logo"
+                  loading="lazy"
                   className="h-5 w-auto"
                 />
               </Link>
