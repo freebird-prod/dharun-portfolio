@@ -5,22 +5,22 @@ import TechStackRadar from "../components/TechStackRadar";
 
 const AboutPage: React.FC = () => {
   const skillsData = [
-    { name: "HTML", image: "/html.png" },
-    { name: "CSS", image: "/css-3.png" },
-    { name: "JavaScript", image: "/js.png" },
-    { name: "TypeScript", image: "/typescript.png" },
-    { name: "D3.js", image: "/d3.svg" },
-    { name: "React", image: "/react.png" },
-    { name: "Next.js", image: "/next.png" },
-    { name: "Tailwind CSS", image: "/tailwind.png" },
-    { name: "Python", image: "/python.png" },
-    { name: "Node.js", image: "/nodejs.svg" },
-    { name: "PostgreSQL", image: "/postgre.png" },
-    { name: "Firebase", image: "/firebase.svg" },
-    { name: "Supabase", image: "/supabase.svg" },
-    { name: "Strapi CMS", image: "/strapi.png" },
-    { name: "Convex DB", image: "/convex.png" },
-    { name: "Figma", image: "/figma.png" },
+    { name: "HTML", image: "/html.webp" },
+    { name: "CSS", image: "/css.webp" },
+    { name: "JavaScript", image: "/js.webp" },
+    { name: "TypeScript", image: "/typescript.webp" },
+    { name: "D3.js", image: "/d3.webp" },
+    { name: "React", image: "/react.webp" },
+    { name: "Next.js", image: "/next.webp" },
+    { name: "Tailwind CSS", image: "/tailwind.webp" },
+    { name: "SaSS", image: "/sass.webp" },
+    { name: "Bootstrap", image: "/bootstrap.webp" },
+    { name: "Strapi CMS", image: "/strapi.webp" },
+    { name: "Figma", image: "/figma.webp" },
+    { name: "PostgreSQL", image: "/postgre.webp" },
+    { name: "Firebase", image: "/firebase.webp" },
+    { name: "Supabase", image: "/supabase.webp" },
+    { name: "Convex DB", image: "/convex.webp" },
   ];
 
   const timeline = [
