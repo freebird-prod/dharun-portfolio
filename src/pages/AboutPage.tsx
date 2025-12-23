@@ -417,31 +417,23 @@ const AboutPage: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6">
-                My Technical Expertise
-              </h3>
               <div className="space-y-4">
                 {[
                   {
                     area: "Frontend Development",
-                    percentage: 95,
+                    percentage: 85,
                     description:
-                      "React.js, Next.js, Tailwind CSS, Framer Motion, Shadcn UI, Daisy UI",
+                      "React.js, Next.js, Tailwind CSS, Bootstrap, JavaScript, TypeScript",
                   },
                   {
                     area: "Backend Development",
-                    percentage: 65,
-                    description: "Node.js, Python (Flask), APIs, JWT Token",
+                    percentage: 45,
+                    description: "Node.js, Python (Flask), APIs",
                   },
                   {
                     area: "Database Management",
-                    percentage: 75,
+                    percentage: 65,
                     description: "PostgreSQL, Firebase, Supabase, Convex, Strapi CMS",
-                  },
-                  {
-                    area: "DevOps & Cloud",
-                    percentage: 55,
-                    description: "Google Cloud Platform, Vercel, Netlify, Docker",
                   },
                 ].map((item, index) => (
                   <motion.div
