@@ -29,20 +29,34 @@ const seoByPath: Record<string, PageSEO> = {
         image: defaultImage,
     },
     '/about': {
-        title: 'About | Dharun Kumar S H',
+        title: 'About Dharun Kumar S H | Front-End Developer & React.js Specialist',
         description:
-            'Learn about Dharun Kumar S H: React developer, UI/UX enthusiast, hackathon participant, and lifelong learner with a passion for building seamless web experiences.',
+            'React.js & Next.js developer Dharun Kumar S H specializes in TypeScript, Tailwind CSS, UI/UX, and high-performance responsive web applications.',
         keywords: [
+            'Dharun Kumar S H',
             'about Dharun Kumar',
             'React developer bio',
+            'Next.js specialist',
+            'TypeScript developer',
+            'frontend developer India',
+            'UI/UX developer',
+            'Tailwind CSS expert',
+            'web developer portfolio',
+            'hackathon winner',
+            'frontend engineer',
+            'JavaScript developer',
+            'responsive web developer',
+            'React specialist',
+            'modern web development',
             'frontend skills',
-            'tech stack',
-            'timeline',
+            'tech stack expertise',
+            'full stack developer',
+            'web performance expert',
         ],
         image: defaultImage,
     },
     '/projects': {
-        title: 'Projects | React, AI, Full-Stack Builds',
+        title: 'Projects | Dharun Kumar - Front-End Developer',
         description:
             'Browse projects spanning React, Next.js, AI tools, image generation, resume analyzers, and IoT dashboards built with modern web stacks.',
         keywords: [
@@ -56,7 +70,7 @@ const seoByPath: Record<string, PageSEO> = {
         image: defaultImage,
     },
     '/certifications': {
-        title: 'Certifications & Achievements | Dharun Kumar S H',
+        title: 'Certifications & Achievements | Dharun Kumar - Front-End Developer',
         description:
             'Verified certifications, workshops, internships, and hackathon achievements covering Flutter, React, AI, RAG, and cloud skills.',
         keywords: [
@@ -69,7 +83,7 @@ const seoByPath: Record<string, PageSEO> = {
         image: defaultImage,
     },
     '/events': {
-        title: 'Events & Hackathons | Dharun Kumar S H',
+        title: 'Events & Hackathons | Dharun Kumar - Front-End Developer',
         description:
             'Participation across hackathons, workshops, and competitions with AI, web, and UI/UX projects, including winning entries and team roles.',
         keywords: [
@@ -82,9 +96,9 @@ const seoByPath: Record<string, PageSEO> = {
         image: defaultImage,
     },
     '/contact': {
-        title: 'Contact | Work with Dharun Kumar S H',
+        title: 'Contact | Dharun Kumar - Front-End Developer',
         description:
-            'Get in touch to collaborate on React, Next.js, or UI/UX projects. Reach out via email, social links, or the contact form for fast replies.',
+            "Reach out to Dharun Kumar for collaboration, inquiries, or web project discussions. Let's connect and build something great together",
         keywords: [
             'contact Dharun Kumar',
             'hire React developer',
@@ -136,7 +150,7 @@ export const applyPageSEO = (pathname: string) => {
 
     ensureMetaTag('description', meta.description);
     ensureMetaTag('keywords', meta.keywords.join(', '));
-    ensureMetaTag('robots', 'index,follow');
+    ensureMetaTag('robots', 'index, follow');
 
     ensureMetaTag('og:title', meta.title, 'property');
     ensureMetaTag('og:description', meta.description, 'property');
