@@ -6,7 +6,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-gray-900 text-white;
   }
@@ -16,11 +16,11 @@
   .bg-size-200 {
     background-size: 200% 200%;
   }
-  
+
   .animate-gradient {
     animation: gradient 3s ease infinite;
   }
-  
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -32,7 +32,7 @@
       background-position: 0% 50%;
     }
   }
-  
+
   .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -108,7 +108,7 @@ textarea:focus {
   .text-responsive {
     font-size: clamp(1rem, 4vw, 1.5rem);
   }
-  
+
   .heading-responsive {
     font-size: clamp(2rem, 8vw, 4rem);
   }
@@ -131,11 +131,11 @@ textarea:focus {
   .mobile-text-sm {
     @apply text-sm;
   }
-  
+
   .mobile-p-4 {
     @apply p-4;
   }
-  
+
   .mobile-gap-4 {
     @apply gap-4;
   }
@@ -143,7 +143,8 @@ textarea:focus {
 
 /* Improved touch targets for mobile */
 @media (max-width: 768px) {
-  button, a {
+  button,
+  a {
     min-height: 44px;
     min-width: 44px;
   }
@@ -153,5 +154,31 @@ textarea:focus {
 @media (min-width: 768px) and (max-width: 1024px) {
   .tablet-spacing {
     @apply space-y-8;
+  }
+}
+
+.svg-illustration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.svg-illustration svg path {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 1;
+}
+
+@keyframes svg-sketch-draw {
+  0% {
+    stroke-dashoffset: var(--path-length);
+    fill: transparent;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
   }
 }

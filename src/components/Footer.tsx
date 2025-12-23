@@ -4,8 +4,6 @@ import {
   Github,
   Linkedin,
   Instagram,
-  Heart,
-  Code2,
   Terminal,
 } from "lucide-react";
 import toast from "react-hot-toast";
@@ -56,11 +54,11 @@ const Footer: React.FC = () => {
   const navigate = useNavigate();
 
   const quickLinks = [
-    { label: "About Me", href: "/about" },
-    { label: "My Projects", href: "/projects" },
+    { label: "About", href: "/about" },
+    { label: "Projects", href: "/projects" },
     { label: "Certifications", href: "/certifications" },
-    { label: "Tech Events", href: "/events" },
-    { label: "Get in Touch", href: "/contact" },
+    { label: "Events", href: "/events" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const containerVariants: Variants = {
@@ -101,8 +99,7 @@ const Footer: React.FC = () => {
         >
           {/* Brand Section */}
           <motion.div variants={itemVariants} className="md:col-span-2">
-            <div className="flex items-center mb-2">
-              <img src="/icon.svg" alt="Logo" className="h-11 w-11" />
+            <div className="flex items-center mb-4">
               <img src="/logo.svg" alt="Logo" className="h-5 w-auto" />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
@@ -181,30 +178,6 @@ const Footer: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Bottom Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-12 pt-14 border-t border-gray-800"
-        >
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <motion.p variants={itemVariants} className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Dharun Kumar S H. All rights
-              reserved.
-            </motion.p>
-            <motion.div
-              variants={itemVariants}
-              className="flex items-center gap-2 text-gray-400 text-sm"
-            >
-              <span>Made with</span>
-              <Heart size={16} className="text-red-400" />
-              <span>and lots of</span>
-              <Code2 size={16} className="text-cyan-400" />
-            </motion.div>
-          </div>
-        </motion.div>
       </div>
     </footer>
   );

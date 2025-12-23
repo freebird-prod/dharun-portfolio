@@ -37,26 +37,26 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md' : 'backdrop-blur'}`}
+      className={`fixed top-3 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md' : 'backdrop-blur'}`}
     >
-      <div className="px-2 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20 w-full max-w-7xl mx-auto rounded-full bg-gray-900/70 border border-cyan-500/15 shadow-[0_0_26px_rgba(6,182,212,0.16)] px-3 sm:px-5 lg:px-6">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
-          >
-            <Link to="/" className="flex items-center">
-              <img
-                src="/logo.svg"
-                alt="Logo"
-                className="h-5 w-auto"
-              />
-            </Link>
-          </motion.div>
+      <LayoutGroup id="tubelight">
+        <div className="px-2 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20 w-full max-w-7xl mx-auto rounded-full bg-gray-900/70 border border-cyan-500/15 shadow-[0_0_26px_rgba(6,182,212,0.16)] px-3 sm:px-5 lg:px-6">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center space-x-2"
+            >
+              <Link to="/" className="flex items-center">
+                <img
+                  src="/logo.svg"
+                  alt="Logo"
+                  className="h-5 w-auto"
+                />
+              </Link>
+            </motion.div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <LayoutGroup id="desktop-tubelight">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:block">
               <div className="flex items-center space-x-4 rounded-full bg-gray-900/60 px-2 py-2 border border-cyan-500/10 shadow-[0_0_20px_rgba(6,182,212,0.08)]">
                 {navItems.map((item) => {
                   const active = isActive(item.path);
@@ -83,34 +83,32 @@ const Navbar: React.FC = () => {
                   );
                 })}
               </div>
-            </LayoutGroup>
-          </div>
+            </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-cyan-400 transition-colors p-2"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.button>
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-300 hover:text-cyan-400 transition-colors p-2"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </motion.button>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Navigation */}
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{
-          opacity: isOpen ? 1 : 0,
-          height: isOpen ? 'auto' : 0
-        }}
-        transition={{ duration: 0.3 }}
-        className="lg:hidden bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/20 overflow-hidden"
-      >
-        <LayoutGroup id="mobile-tubelight">
-          <div className="px-4 pt-2 pb-6 space-y-2">
+        {/* Mobile Navigation */}
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{
+            opacity: isOpen ? 1 : 0,
+            height: isOpen ? 'auto' : 0
+          }}
+          transition={{ duration: 0.3 }}
+          className="lg:hidden w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6"
+        >
+          <div className="rounded-[28px] bg-gray-900/80 border border-cyan-500/25 shadow-[0_10px_40px_rgba(6,182,212,0.12)] backdrop-blur px-3 sm:px-4 py-3 space-y-1.5">
             {navItems.map((item) => {
               const active = isActive(item.path);
 
@@ -122,15 +120,15 @@ const Navbar: React.FC = () => {
                 >
                   <Link
                     to={item.path}
-                    className={`relative block px-4 py-3 text-base font-semibold transition-colors duration-200 rounded-xl overflow-hidden ${active
+                    className={`relative block px-4 py-2.5 text-base font-semibold transition-colors duration-200 rounded-full overflow-hidden ${active
                       ? 'text-cyan-200'
                       : 'text-gray-300 hover:text-cyan-200'
                       }`}
                   >
                     {active && (
                       <motion.span
-                        layoutId="mobile-tubelight"
-                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/15 via-cyan-400/10 to-violet-500/15 border border-cyan-400/20 shadow-[0_0_18px_rgba(6,182,212,0.22)]"
+                        layoutId="tubelight"
+                        className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 via-cyan-400/10 to-violet-500/20 border border-cyan-400/25 shadow-[0_0_25px_rgba(6,182,212,0.25)]"
                         transition={{ type: 'spring', stiffness: 280, damping: 26 }}
                       />
                     )}
@@ -140,8 +138,8 @@ const Navbar: React.FC = () => {
               );
             })}
           </div>
-        </LayoutGroup>
-      </motion.div>
+        </motion.div>
+      </LayoutGroup>
     </motion.nav>
   );
 };

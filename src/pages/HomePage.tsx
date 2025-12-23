@@ -109,8 +109,8 @@ const HomePage: React.FC = () => {
             variants={itemVariants}
             className="mb-8 lg:mb-12"
           >
-            <h2 className="text-xl sm:text-2xl lg:text-4xl font-semibold text-gray-300 mb-4 lg:mb-6">
-              Aspiring React Developer
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-300/75 mb-4 lg:mb-6">
+              Aspring React Developer | UI/UX Enthusiast
             </h2>
 
             {/* Dynamic Typewriter Effect */}
@@ -121,10 +121,6 @@ const HomePage: React.FC = () => {
               />
             </div>
 
-            <p className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed px-4">
-              Third-year Information Technology Student at Meenakshi Sundararajan Engineering College,
-              crafting innovative solutions with cutting-edge technologies and turning ideas into reality.
-            </p>
           </motion.div>
 
           <motion.div
@@ -226,7 +222,7 @@ const HomePage: React.FC = () => {
               </span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
-              A glimpse into my journey as a developer and designer
+              A glimpse into my journey as a developer and student
             </p>
           </motion.div>
 
@@ -269,17 +265,15 @@ const HomePage: React.FC = () => {
               </span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover my journey, projects, and achievements
+              Discover my projects, achievements and events I participated in.
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { title: 'About Me', path: '/about', description: 'My journey and skills', icon: '👨‍💻' },
               { title: 'Projects', path: '/projects', description: 'Innovative solutions', icon: '🚀' },
-              { title: 'Certifications', path: '/certifications', description: 'Professional achievements', icon: '🏆' },
-              { title: 'Events', path: '/events', description: 'Hackathons & conferences', icon: '🎯' },
-              { title: 'Contact', path: '/contact', description: 'Let\'s connect', icon: '📧' },
+              { title: 'Certifications', path: '/certifications', description: 'Professional Achievements', icon: '🏆' },
+              { title: 'Events', path: '/events', description: 'Hackathons & Events', icon: '🎯' },
             ].map((item, index) => (
               <motion.div
                 key={item.title}

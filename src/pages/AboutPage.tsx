@@ -1,207 +1,26 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { GraduationCap, Target, Code, Zap, Brain, Rocket, Globe, GitBranchPlus, EarthLock, Users } from "lucide-react";
-import SkillModal from "../components/SkillModal";
+import { GraduationCap, Target, Code, Zap, Brain, Rocket, Users } from "lucide-react";
 import TechStackRadar from "../components/TechStackRadar";
 
 const AboutPage: React.FC = () => {
-  const [selectedSkill, setSelectedSkill] = useState<unknown>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const skillsData = [
-    {
-      name: "HTML5",
-      proficiency: 90,
-      experience: "4+ years",
-      category: "Frontend",
-      image: "/html.png",
-      description:
-        "The backbone of every web page I’ve ever built — from semantic layout to responsive structure. HTML5 is where it all began, and where clean code still lives. It’s not just tags — it’s how the story is told.",
-      projects: [
-        { name: "Portfolio Website", url: "#" },
-        { name: "Responsive Resume Builder", url: "#" },
-        { name: "Event Landing Page", url: "#" },
-      ],
-    },
-    {
-      name: "CSS3",
-      proficiency: 90,
-      experience: "4+ years",
-      category: "Frontend",
-      image: "/css-3.png",
-      description:
-        "From Flexbox finesse to Grid mastery, CSS3 is my design playground. I sculpt pixels, craft layouts, and animate user dreams into reality — all with style and structure.",
-      projects: [
-        { name: "Responsive Portfolio", url: "#" },
-        { name: "CSS Art Gallery", url: "#" },
-        { name: "Themed Blog UI", url: "#" },
-      ],
-    },
-    {
-      name: "JavaScript",
-      proficiency: 70,
-      experience: "3+ years",
-      category: "Frontend",
-      image: "/js.png",
-      description:
-        "My first love in web development — the language that powers interactivity and breathes life into the browser. From ES6 tricks to async wizardry, JavaScript is where the magic begins.",
-      projects: [
-        { name: "Interactive Dashboard", url: "#" },
-        { name: "Quiz Web App", url: "#" },
-        { name: "Dynamic Form Builder", url: "#" },
-      ],
-    },
-    {
-      name: "React",
-      proficiency: 95,
-      experience: "2+ years",
-      category: "Frontend",
-      image: "/react.png",
-      description:
-        "Building sleek, reactive user interfaces with hooks, context, and the virtual DOM. React is where my frontend ideas turn into powerful, performant, pixel-perfect realities.",
-      projects: [
-        {
-          name: "AI-Powered Resume Builder",
-          url: "https://builderbuddy.vercel.app",
-        },
-        { name: "Interactive Portfolio", url: "#" },
-        { name: "Voice-to-Text Summarizer", url: "#" },
-      ],
-    },
-    {
-      name: "Next.js",
-      proficiency: 85,
-      experience: "1+ years",
-      category: "Fullstack",
-      image: "/next.png",
-      description:
-        "The framework where frontend meets backend in perfect harmony. From blazing-fast SSR to API routes, I use Next.js to ship full-stack experiences that feel instant and seamless.",
-      projects: [
-        { name: "Dev Portfolio v2", url: "#" },
-        { name: "AI-Powered Blog Platform", url: "#" },
-      ],
-    },
-    {
-      name: "Framer Motion",
-      proficiency: 80,
-      experience: "2+ years",
-      category: "Frontend",
-      image: "/framer.svg",
-      description:
-        "Framer Motion brings fluidity to the frontend. From smooth transitions to dazzling micro-interactions, I use it to breathe life into static UIs.",
-      projects: [
-        { name: "Animated Portfolio", url: "#" },
-        { name: "Interactive Dashboard", url: "#" },
-      ],
-    },
-    {
-      name: "Python",
-      proficiency: 60,
-      experience: "4+ years",
-      category: "Backend",
-      image: "/python.png",
-      description:
-        "Clean, elegant, and wildly powerful — Python is my go-to for everything from backend APIs to automation and AI. When readability meets capability, magic happens.",
-      projects: [
-        { name: "Enterprise Dashboard", url: "#" },
-        { name: "Data Cleaning Scripts", url: "#" },
-        { name: "FastAPI Backend", url: "#" },
-      ],
-    },
-    {
-      name: "Node.js",
-      proficiency: 50,
-      experience: "1+ years",
-      category: "Backend",
-      image: "/nodejs.svg",
-      description:
-        "My go-to for building scalable server-side apps with JavaScript. From REST APIs to real-time systems, Node.js keeps things fast, event-driven, and efficient.",
-      projects: [
-        { name: "Realtime Chat App", url: "#" },
-        { name: "Auth-Enabled Dashboard", url: "#" },
-      ],
-    },
-    {
-      name: "PostgreSQL",
-      proficiency: 90,
-      experience: "2+ years",
-      category: "Database",
-      image: "/postgre.png",
-      description:
-        "Reliable, relational, and robust — PostgreSQL is my go-to for structured data. From complex joins to ACID-compliant transactions, it never lets me down.",
-      projects: [
-        { name: "User Management System", url: "#" },
-        { name: "Analytics Dashboard", url: "#" },
-      ],
-    },
-    {
-      name: "Firebase",
-      proficiency: 75,
-      experience: "1+ years",
-      category: "Backend",
-      image: "/firebase.svg",
-      description:
-        "From real-time databases to blazing-fast hosting and authentication, Firebase is my go-to for rapid app development and seamless user experiences.",
-      projects: [
-        { name: "Realtime Chat App", url: "#" },
-        { name: "Auth-Enabled Dashboard", url: "#" },
-      ],
-    },
-    {
-      name: "Supabase",
-      proficiency: 60,
-      experience: "1+ years",
-      category: "Backend",
-      image: "/supabase.svg",
-      description:
-        "The open-source Firebase alternative — Postgres-powered, real-time, and developer-friendly. I use Supabase to build full-stack apps without the backend headaches.",
-      projects: [
-        { name: "Realtime Chat App", url: "#" },
-        { name: "Auth-Enabled Dashboard", url: "#" },
-      ],
-    },
-    {
-      name: "Strapi CMS",
-      proficiency: 65,
-      experience: "1+ years",
-      category: "Backend",
-      image: "/strapi.png",
-      description:
-        "Headless CMS that gives me full control over content and APIs. Perfect for JAMstack sites, blogs, and custom dashboards — all backed by powerful admin features.",
-      projects: [
-        {
-          name: "AI-Powered Resume Builder",
-          url: "https://builderbuddy.vercel.app",
-        },
-        { name: "Blog API with Roles", url: "#" },
-      ],
-    },
-    {
-      name: "Convex DB",
-      proficiency: 60,
-      experience: "1+ years",
-      category: "Backend",
-      image: "/convex.png",
-      description:
-        "Serverless database and backend platform that simplifies building real-time apps. I use Convex to handle data sync, authentication, and business logic with ease.",
-      projects: [
-        {
-          name: "AI-Powered Resume Builder",
-          url: "https://builderbuddy.vercel.app",
-        },
-        { name: "Blog API with Roles", url: "#" },
-      ],
-    },
-    {
-      name: "Figma",
-      proficiency: 90,
-      experience: "1+ years",
-      category: "Frontend",
-      image: "/figma.png",
-      description:
-        "Collaborative interface design tool I use to prototype, wireframe, and create pixel-perfect UI designs. Ideal for frontend collaboration and handoff to developers.",
-    },
+    { name: "HTML", image: "/html.png" },
+    { name: "CSS", image: "/css-3.png" },
+    { name: "JavaScript", image: "/js.png" },
+    { name: "TypeScript", image: "/typescript.png" },
+    { name: "D3.js", image: "/d3.svg" },
+    { name: "React", image: "/react.png" },
+    { name: "Next.js", image: "/next.png" },
+    { name: "Tailwind CSS", image: "/tailwind.png" },
+    { name: "Python", image: "/python.png" },
+    { name: "Node.js", image: "/nodejs.svg" },
+    { name: "PostgreSQL", image: "/postgre.png" },
+    { name: "Firebase", image: "/firebase.svg" },
+    { name: "Supabase", image: "/supabase.svg" },
+    { name: "Strapi CMS", image: "/strapi.png" },
+    { name: "Convex DB", image: "/convex.png" },
+    { name: "Figma", image: "/figma.png" },
   ];
 
   const timeline = [
@@ -246,14 +65,8 @@ const AboutPage: React.FC = () => {
     },
   ];
 
-  const handleSkillClick = (skill: any) => {
-    setSelectedSkill(skill);
-    setIsModalOpen(true);
-
-    if (skill.url) {
-      window.location.href = skill.url;
-    }
-  };
+  const [creatorSvg, setCreatorSvg] = useState<string>("");
+  const svgHeroRef = useRef<HTMLDivElement | null>(null);
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -277,49 +90,63 @@ const AboutPage: React.FC = () => {
     },
   };
 
-  // New variants for image animations
-  const imageVariants: Variants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.5,
-      rotateY: -180,
-      z: -100
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      rotateY: 0,
-      z: 0,
-      transition: {
-        duration: 1.2,
-        ease: "easeOut",
-        delay: 0.3,
-      },
-    },
-  };
 
-  const floatingVariants: Variants = {
-    animate: {
-      y: [-10, 10, -10],
-      rotateZ: [-2, 2, -2],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
 
-  const orbitalVariants: Variants = {
-    animate: {
-      rotate: 360,
-      transition: {
-        duration: 20,
-        repeat: Infinity,
-        ease: "linear",
-      },
-    },
-  };
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch("/creator.svg")
+      .then((response) => response.text())
+      .then((svgText) => {
+        if (isMounted) {
+          setCreatorSvg(svgText);
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to load creator.svg", error);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!creatorSvg || !svgHeroRef.current) return;
+
+    const svgElement = svgHeroRef.current.querySelector("svg");
+    if (!svgElement) return;
+
+    svgElement.setAttribute("width", "100%");
+    svgElement.setAttribute("height", "100%");
+
+    // Apply sketch animation to all paths
+    const paths = svgElement.querySelectorAll("path");
+    paths.forEach((path, index) => {
+      if (!(path instanceof SVGPathElement)) return;
+
+      const length = path.getTotalLength();
+      const delay = index * 0.003; // Stagger animation for each path
+
+      path.style.strokeDasharray = `${length}`;
+      path.style.strokeDashoffset = `${length}`;
+      path.style.setProperty("--path-length", `${length}`);
+      path.style.animation = `svg-sketch-draw 0.3s ease-in-out ${delay}s forwards`;
+      path.style.strokeLinecap = "round";
+      path.style.strokeLinejoin = "round";
+    });
+
+    return () => {
+      paths.forEach((path) => {
+        if (path instanceof SVGPathElement) {
+          path.style.animation = "";
+          path.style.strokeDasharray = "";
+          path.style.strokeDashoffset = "";
+          path.style.removeProperty("--path-length");
+        }
+      });
+    };
+  }, [creatorSvg]);
 
   return (
     <div className="min-h-screen pt-16 lg:pt-20">
@@ -327,180 +154,37 @@ const AboutPage: React.FC = () => {
       <section className="py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
 
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                opacity: [0.3, 0.8, 0.3],
-                scale: [1, 1.5, 1],
-              }}
-              transition={{
-                duration: 2 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
-        </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-24"
+            className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16 lg:mb-24"
           >
-            {/* Left Side - Profile Image with Massive Animations */}
+            {/* Left Side - SVG Profile */}
             <motion.div
               variants={itemVariants}
-              className="relative flex justify-center lg:justify-start"
+              className="relative flex justify-center lg:justify-start order-2 lg:order-1"
             >
-              {/* Orbital rings */}
-              <motion.div
-                variants={orbitalVariants}
-                animate="animate"
-                className="absolute inset-0 w-80 h-80 lg:w-96 lg:h-96 mx-auto"
-              >
-                <div className="absolute inset-4 rounded-full border border-cyan-500/20 border-dashed"></div>
-              </motion.div>
-
-              <motion.div
-                variants={orbitalVariants}
-                animate="animate"
-                style={{ animationDirection: 'reverse' }}
-                className="absolute inset-0 w-80 h-80 lg:w-96 lg:h-96 mx-auto"
-              >
-                <div className="absolute inset-8 rounded-full border border-violet-500/20 border-dotted"></div>
-              </motion.div>
-
-              {/* Floating orbs */}
-              {[...Array(6)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400 opacity-60"
-                  style={{
-                    left: `${50 + 40 * Math.cos((i * Math.PI * 2) / 6)}%`,
-                    top: `${50 + 40 * Math.sin((i * Math.PI * 2) / 6)}%`,
-                  }}
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.6, 1, 0.6],
-                    rotate: 360,
-                  }}
-                  transition={{
-                    duration: 3 + i * 0.5,
-                    repeat: Infinity,
-                    delay: i * 0.2,
-                  }}
-                />
-              ))}
-
-              {/* Main profile image container */}
-              <motion.div
-                variants={imageVariants}
-                className="relative z-10 w-64 h-64 lg:w-80 lg:h-80"
-              >
-                <motion.div
-                  variants={floatingVariants}
-                  animate="animate"
-                  className="relative w-full h-full"
-                >
-                  {/* Gradient border */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-violet-500 to-cyan-500 p-1 bg-size-200 animate-gradient">
-                    <div className="w-full h-full rounded-full bg-gray-900 p-2">
-                      <div className="w-full h-full rounded-full bg-gradient-to-br from-cyan-400/20 to-violet-400/20 flex items-center justify-center overflow-hidden">
-                        {/* Profile Image */}
-                        <img
-                          src="/creator.webp"
-                          alt="Dharun Kumar S H - Portfolio Creator"
-                          className="w-full h-full object-cover object-top rounded-full"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = 'none';
-                            target.parentElement!.innerHTML = `
-                          <div class="w-full h-full bg-gradient-to-br from-cyan-400 to-violet-600 rounded-full flex items-center justify-center text-white text-6xl lg:text-8xl font-bold">
-                          DK
-                          </div>
-                          `;
-                          }}
-                        />
-                      </div>
-                    </div>
+              <div className="w-full max-w-sm lg:max-w-md xl:max-w-lg">
+                {creatorSvg ? (
+                  <div
+                    ref={svgHeroRef}
+                    className="svg-illustration w-full h-auto aspect-square"
+                    dangerouslySetInnerHTML={{ __html: creatorSvg }}
+                  />
+                ) : (
+                  <div className="flex w-full aspect-square items-center justify-center text-sm text-gray-400 animate-pulse">
+                    Loading illustration…
                   </div>
-
-                  {/* Decorative elements */}
-                  <motion.div
-                    className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center"
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      rotate: [0, 180, 360],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                    }}
-                  >
-                    <GitBranchPlus size={16} className="text-white" />
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600  rounded-full flex items-center justify-center"
-                    animate={{
-                      scale: [1, 1.3, 1],
-                      rotate: [360, 180, 0],
-                    }}
-                    transition={{
-                      duration: 2.5,
-                      repeat: Infinity,
-                      delay: 0.5,
-                    }}
-                  >
-                    <EarthLock size={16} className="text-white" />
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute top-1/2 -right-8 w-4 h-4 bg-gradient-to-r from-cyan-400 to-violet-400 rounded-full flex items-center justify-center"
-                    animate={{
-                      x: [0, 10, 0],
-                      scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      delay: 1,
-                    }}
-                  >
-                    <Globe size={8} className="text-white" />
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-
-              {/* Glowing effect */}
-              <motion.div
-                className="absolute inset-0 w-64 h-64 lg:w-80 lg:h-80 mx-auto rounded-full bg-gradient-to-r from-cyan-500/20 to-violet-500/20 blur-xl"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.6, 0.3],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
+                )}
+              </div>
             </motion.div>
 
             {/* Right Side - Hero Content */}
             <motion.div
               variants={containerVariants}
-              className="text-center lg:text-left space-y-6 lg:space-y-8"
+              className="text-center lg:text-left space-y-6 lg:space-y-8 order-1 lg:order-2"
             >
               <motion.h1
                 variants={itemVariants}
@@ -609,48 +293,38 @@ const AboutPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              {/* Interactive Skills */}
+              {/* Skills (static) */}
               <motion.div
                 variants={itemVariants}
                 className="space-y-4 lg:space-y-6"
               >
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-200 mb-4 lg:mb-6">
-                  Interactive Skills
-                  <span className="text-sm text-gray-400 ml-2">
-                    (Click to explore!)
-                  </span>
+                  Developer Skills
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4">
                   {skillsData?.map((skill, index) => (
-                    <motion.button
+                    <motion.div
                       key={skill.name}
-                      initial={{ opacity: 0, scale: 0.8 }}
+                      initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => handleSkillClick(skill)}
-                      className="p-4 bg-gradient-to-r from-cyan-500/20 to-violet-500/20 border border-cyan-500/30 rounded-xl text-center hover:from-cyan-500/30 hover:to-violet-500/30 transition-all duration-300 group"
+                      transition={{ delay: index * 0.08 }}
+                      className="p-4 bg-gradient-to-r from-cyan-500/15 to-violet-500/15 border border-cyan-500/25 rounded-xl text-center"
                     >
                       <div className="flex justify-center items-center w-full h-16 mb-2">
                         <img
                           src={skill.image}
                           alt={skill.name}
-                          className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
+                          className="w-12 h-12 object-contain"
                           onError={(e) => {
-                            (e.target as HTMLImageElement).src =
-                              "/fallback.png";
+                            (e.target as HTMLImageElement).src = "/fallback.png";
                           }}
                         />
                       </div>
                       <div className="text-sm font-medium text-white truncate">
                         {skill.name}
                       </div>
-                      <div className="text-xs text-gray-400 mt-1">
-                        {skill.proficiency}%
-                      </div>
-                    </motion.button>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
@@ -852,15 +526,6 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Skill Modal */}
-      <SkillModal
-        skill={selectedSkill}
-        isOpen={isModalOpen}
-        onClose={() => {
-          setIsModalOpen(false);
-          setSelectedSkill(null);
-        }}
-      />
     </div>
   );
 };

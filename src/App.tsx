@@ -16,6 +16,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import CertificationsPage from './pages/CertificationsPage';
 import EventsPage from './pages/EventsPage';
 import ContactPage from './pages/ContactPage';
+import { applyPageSEO } from './utils/seo';
 
 function AppContent(): JSX.Element {
   const location = useLocation();
@@ -24,6 +25,10 @@ function AppContent(): JSX.Element {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    applyPageSEO(location.pathname);
+  }, [location.pathname]);
 
   return (
     <motion.div
