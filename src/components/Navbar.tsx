@@ -37,23 +37,15 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-gray-900/80 backdrop-blur-md border-b border-cyan-500/20'
-        : 'bg-transparent'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md' : 'backdrop-blur'}`}
     >
-      <div className="px-3 sm:px-5 lg:px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20 w-full max-w-7xl mx-auto rounded-full bg-gray-900/70 border border-cyan-500/15 shadow-[0_0_26px_rgba(6,182,212,0.16)] px-3 sm:px-5 lg:px-6">
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
             <Link to="/" className="flex items-center">
-              <img
-                src="/icon.svg"
-                alt="Logo"
-                className="h-11 w-11"
-              />
               <img
                 src="/logo.svg"
                 alt="Logo"
@@ -74,7 +66,7 @@ const Navbar: React.FC = () => {
                       <Link
                         to={item.path}
                         className={`relative block px-4 py-2 text-sm font-semibold tracking-wide rounded-full transition-colors duration-200 ${active
-                          ? 'text-cyan-200'
+                          ? 'text-cyan-100'
                           : 'text-gray-300 hover:text-cyan-200'
                           }`}
                       >
