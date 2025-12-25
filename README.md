@@ -14,28 +14,6 @@ A modern, interactive portfolio website built with React, TypeScript, and Tailwi
 - **Mobile Responsive** - Optimized for all device sizes
 - **Production Ready** - Clean code architecture and performance optimized
 
-## 🤖 AI Chatbot Setup
-
-The portfolio includes a functional AI chatbot powered by OpenRouter API. To set it up:
-
-1. **Get OpenRouter API Key:**
-   - Visit [OpenRouter.ai](https://openrouter.ai/)
-   - Sign up and get your API key
-   - Copy the API key
-
-2. **Configure Environment:**
-   ```bash
-   cp .env.example .env
-   ```
-   - Open `.env` file
-   - Replace `your_openrouter_api_key_here` with your actual API key
-
-3. **The chatbot will:**
-   - Answer questions about skills, projects, and experience
-   - Provide personalized responses about Dharun's background
-   - Engage visitors with interactive conversations
-   - Use Claude 3.5 Sonnet for intelligent responses
-
 ## 🛠️ Technologies Used
 
 - **Frontend:** React 18, TypeScript, Tailwind CSS
