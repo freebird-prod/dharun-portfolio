@@ -7,7 +7,6 @@ A modern, interactive portfolio website built with React, TypeScript, and Tailwi
 - **Dynamic Typewriter Effect** - Engaging taglines that cycle through different messages
 - **Interactive Skill Matrix** - Clickable skills with detailed modals showing proficiency and projects
 - **Tech Stack Radar Chart** - Visual representation of technical expertise
-- **AI Chatbot** - Functional chatbot powered by OpenRouter API
 - **AMA Modal** - Personal insights and personality showcase
 - **Dark Mode** - Persistent theme switching with localStorage
 - **Smooth Animations** - Framer Motion powered transitions and micro-interactions
@@ -21,7 +20,6 @@ A modern, interactive portfolio website built with React, TypeScript, and Tailwi
 - **Charts:** Recharts
 - **Icons:** Lucide React
 - **Typewriter:** React Simple Typewriter
-- **AI:** OpenRouter API with Claude 3.5 Sonnet
 - **Build Tool:** Vite
 - **Deployment:** Ready for Netlify/Vercel
 
@@ -34,10 +32,6 @@ git clone <repository-url>
 # Install dependencies
 npm install
 
-# Set up environment variables
-cp .env.example .env
-# Add your OpenRouter API key to .env
-
 # Start development server
 npm run dev
 ```
@@ -47,9 +41,7 @@ npm run dev
 - **TypewriterEffect** - Dynamic text animation
 - **SkillModal** - Interactive skill exploration
 - **TechStackRadar** - Visual skill representation
-- **ChatBot** - AI-powered conversation
 - **AMAModal** - Personal insights showcase
-- **PageLoader** - Smooth loading animations
 
 ## 🌟 Production Features
 
@@ -69,9 +61,10 @@ npm run dev
 ## 🚀 Deployment
 
 The project is ready for deployment on:
-- Netlify (recommended)
-- Vercel
+- Netlify 
+- Vercel (recommended)
 - GitHub Pages
+- Cloudfare Pages
 - Any static hosting service
 
 ## 📄 License
